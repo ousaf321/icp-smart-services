@@ -1,0 +1,551 @@
+/*The html font size is 10px, change everything inside here to "rem" instead of "em" to affect everything*/
+/* .aegov-btn {
+  font-size: 14px;
+} */
+ 
+.aegov-btn {
+  display: inline-flex;
+  flex-shrink: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration-line: none;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  font-size: 1rem;
+  height: 3rem;
+  gap: .5rem;
+  border-radius: .5rem;
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+.aegov-btn:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px
+}
+
+.aegov-btn:focus-visible {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-offset-width: 2px
+}
+
+.aegov-btn {
+  --tw-bg-opacity: 1;
+  background-color: rgb(146 114 42 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+}
+
+.aegov-btn:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(182 138 53 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(249 247 237 / var(--tw-text-opacity, 1));
+  --tw-shadow: 0px 0px 0px 0.375rem;
+  --tw-shadow-colored: 0px 0px 0px 0.375rem var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: #F2ECCF;
+  --tw-shadow: var(--tw-shadow-colored)
+}
+
+.aegov-btn:focus-visible {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(250 212 79 / var(--tw-ring-opacity, 1))
+}
+
+.aegov-btn:disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: .3;
+  --tw-shadow: 0 0 #0000 !important;
+  --tw-shadow-colored: 0 0 #0000 !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important
+}
+
+.aegov-btn.btn-soft {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 247 237 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(124 94 36 / var(--tw-text-opacity, 1))
+}
+
+.aegov-btn.btn-soft:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 236 207 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(146 114 42 / var(--tw-text-opacity, 1));
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.aegov-btn.btn-soft:focus-visible {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(248 192 39 / var(--tw-ring-opacity, 1));
+  --tw-ring-offset-width: 0px
+}
+
+.aegov-btn.btn-soft:disabled {
+  opacity: .5
+}
+
+.aegov-btn.btn-link {
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: rgb(146 114 42 / var(--tw-text-opacity, 1))
+}
+
+.aegov-btn.btn-link:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 247 237 / var(--tw-bg-opacity, 1));
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.aegov-btn.btn-link:focus-visible {
+  --tw-border-opacity: 1;
+  border-color: rgb(248 192 39 / var(--tw-border-opacity, 1));
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(248 192 39 / var(--tw-ring-opacity, 1));
+  --tw-ring-offset-width: 0px
+}
+
+.aegov-btn.btn-outline {
+  border-color: var(--clr-primary-400);
+  background-color: transparent;
+  color: var(--clr-primary-400);
+}
+
+.aegov-btn.btn-outline:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 247 237 / var(--tw-bg-opacity, 1));
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.aegov-btn.btn-outline:focus-visible {
+  --tw-border-opacity: 1;
+  border-color: rgb(248 192 39 / var(--tw-border-opacity, 1));
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(248 192 39 / var(--tw-ring-opacity, 1));
+  --tw-ring-offset-width: 0px
+}
+
+.aegov-btn.btn-lg {
+  height: 4rem;
+  gap: .75rem;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  padding-block: 0;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.aegov-btn.btn-lg>svg {
+  height: 1.75rem;
+  width: 1.75rem
+}
+
+.aegov-btn.btn-lg:has(svg) {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem
+}
+
+.aegov-btn.btn-lg:has(svg+svg) {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem
+}
+
+.aegov-btn.btn-lg>img {
+  height: 1.75rem;
+  width: 1.75rem
+}
+
+.aegov-btn.btn-lg:has(img) {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem
+}
+
+.aegov-btn.btn-lg:has(img+img) {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem
+}
+
+.aegov-btn.btn-lg .btn-icon {
+  width: 3.25rem;
+  gap: 0px;
+  padding-left: 0;
+  padding-right: 0
+}
+
+.aegov-btn.btn-base {
+  height: 3rem;
+  gap: .5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem
+}
+
+.aegov-btn.btn-sm {
+  height: 2.5rem;
+  border-radius: .375rem;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  font-size: 1rem;
+  line-height: 1.5rem
+}
+
+.aegov-btn.btn-sm>svg {
+  height: 1.25em;
+  width: 1.25em
+}
+
+.aegov-btn.btn-sm:has(svg) {
+  padding-left: 1rem;
+  padding-right: 1rem
+}
+
+.aegov-btn.btn-sm:has(svg+svg) {
+  padding-left: .75rem;
+  padding-right: .75rem
+}
+
+.aegov-btn.btn-sm>img {
+  height: 1.25rem;
+  width: 1.25rem
+}
+
+.aegov-btn.btn-sm:has(img) {
+  padding-left: 1rem;
+  padding-right: 1rem
+}
+
+.aegov-btn.btn-sm:has(img+img) {
+  padding-left: .75rem;
+  padding-right: .75rem
+}
+
+.aegov-btn.btn-sm.btn-icon {
+  width: 2.5rem;
+  gap: 0px;
+  padding-left: 0;
+  padding-right: 0
+}
+
+p.aegov-btn.btn-xs {
+  margin-bottom: 1.75rem
+}
+
+.aegov-btn.btn-xs {
+  height: 2rem;
+  border-radius: .25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: .875rem;
+  line-height: 1.25rem
+}
+
+.aegov-btn.btn-xs>svg {
+  height: 1.125em;
+  width: 1.125em
+}
+
+.aegov-btn.btn-xs:has(svg) {
+  padding-left: .75rem;
+  padding-right: .75rem
+}
+
+.aegov-btn.btn-xs:has(svg+svg) {
+  padding-left: .5rem;
+  padding-right: .5rem
+}
+
+.aegov-btn.btn-xs>img {
+  height: 1.125rem;
+  width: 1.125rem
+}
+
+.aegov-btn.btn-xs:has(img) {
+  padding-left: .75rem;
+  padding-right: .75rem
+}
+
+.aegov-btn.btn-xs:has(img+img) {
+  padding-left: .5rem;
+  padding-right: .5rem
+}
+
+.aegov-btn.btn-xs.btn-icon {
+  width: 2rem;
+  gap: 0px;
+  padding-left: 0;
+  padding-right: 0
+}
+
+.aegov-btn.btn-block {
+  width: 100%
+}
+
+.aegov-btn>svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  flex-shrink: 0;
+  fill: currentColor
+}
+
+.aegov-btn>i {
+  height: 1.5rem;
+  width: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.aegov-btn:has(svg) {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem
+}
+
+.aegov-btn:has(svg+svg) {
+  padding-left: 1rem;
+  padding-right: 1rem
+}
+
+.aegov-btn>img {
+  height: 1.5rem;
+  width: 1.5rem;
+  flex-shrink: 0;
+  fill: currentColor
+}
+
+.aegov-btn:has(img) {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem
+}
+
+.aegov-btn:has(img+img) {
+  padding-left: 1rem;
+  padding-right: 1rem
+}
+
+.aegov-btn.btn-icon {
+  width: 3rem;
+  height:3rem;
+  gap: 0px;
+  padding-left: 0;
+  padding-right: 0;
+  text-decoration:none;
+}
+
+.aegov-btn.btn-icon i {
+    position:static;
+    top:unset;
+    line-height:unset;
+}
+
+.aegov-btn.btn-secondary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(35 37 40 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(247 247 247 / var(--tw-text-opacity, 1))
+}
+
+.aegov-btn.btn-secondary:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 15 18 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(225 227 229 / var(--tw-text-opacity, 1));
+  --tw-shadow-color: #E1E3E5;
+  --tw-shadow: var(--tw-shadow-colored)
+}
+
+.aegov-btn.btn-secondary:focus-visible {
+  --tw-ring-color: var(--clr-info-300);
+}
+
+.aegov-btn.btn-secondary.btn-soft {
+  background-color: var(--clr-black-50);
+  color: var(--clr-black-800);
+}
+
+.aegov-btn.btn-secondary.btn-soft:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(225 227 229 / var(--tw-bg-opacity, 1));
+  color: var(--clr-black-800);;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.aegov-btn.btn-secondary.btn-soft:focus-visible {
+  --tw-ring-offset-width: 0px
+}
+
+.aegov-btn.btn-secondary.btn-soft:disabled {
+  opacity: .5
+}
+
+.aegov-btn.btn-secondary.btn-link {
+  background-color: transparent;
+  color: var(--clr-black-800);
+}
+
+.aegov-btn.btn-secondary.btn-link:hover {
+  background-color: var(--clr-black-50);
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.aegov-btn.btn-secondary.btn-link:focus-visible {
+  --tw-border-opacity: 1;
+  border-color: rgb(117 219 255 / var(--tw-border-opacity, 1));
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-offset-width: 0px
+}
+
+.aegov-btn.btn-secondary.btn-outline {
+  --tw-border-opacity: 1;
+  border-color: rgb(35 37 40 / var(--tw-border-opacity, 1));
+  background-color: transparent;
+  color: var(--clr-black-800);
+}
+
+.aegov-btn.btn-secondary.btn-outline:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(225 227 229 / var(--tw-bg-opacity, 1));
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.aegov-btn.btn-secondary.btn-outline:focus-visible {
+  --tw-border-opacity: 1;
+  border-color: rgb(117 219 255 / var(--tw-border-opacity, 1));
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-offset-width: 0px
+}
+
+.aegov-btn.btn-danger {
+  border-color: rgb(216 55 49);
+  background-color: rgb(216 55 49);
+  color: rgb(254 242 242);
+}
+
+.aegov-btn.btn-danger:hover {
+  border-color: rgb(216 55 49);
+  background-color: rgb(234 79 73);
+  color: rgb(254 242 242);
+  box-shadow: 0 0 0 0.375rem #fef2f2;
+}
+
+.aegov-link {
+  color: var(--clr-primary-600);
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background-color: transparent;
+  padding: .5rem .625rem;
+  vertical-align: middle;
+  font-weight: 600;
+  text-decoration-line: none;
+  margin-left: -.625rem;
+}
+
+.aegov-link:hover {
+  text-decoration-line: underline
+}
+
+.aegov-link:where([dir=rtl], [dir=rtl] *) {
+  margin-right: -.625rem;
+  margin-left: 0
+}
+
+.aegov-link:focus-visible {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(248 192 39 / var(--tw-ring-opacity, 1));
+  --tw-ring-offset-width: 4px
+}
+
+.aegov-link>svg.link-icon {
+  height: 1.25rem;
+  width: 1.25rem
+}
+
+.aegov-link.link-underline {
+  text-decoration-line: underline
+}
+
+.aegov-link.link-soft:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 247 237 / var(--tw-bg-opacity, 1));
+  text-decoration-line: none
+}
+
+.aegov-link.link-secondary {
+  color: var(--clr-black-800);
+}
+
+.aegov-link.link-secondary:hover {
+  --tw-text-opacity: 1;
+  color: rgb(62 64 70 / var(--tw-text-opacity, 1))
+}
+
+.aegov-link.link-secondary:focus-visible {
+  --tw-ring-color: var(--clr-info-300);
+}
+
+.aegov-link.link-secondary.link-soft:hover {
+  background-color: var(--clr-black-50);
+}
+
+.aegov-font-size .aegov-btn {
+  height: 3em;
+  border-radius: 0.5em;
+  font-size: 1em;
+}
+
+.aegov-font-size .aegov-btn.btn-sm {
+  height: 2.875em;
+  font-size: 0.875em;
+}
+
+.aegov-font-size .aegov-btn.btn-xs {
+  height: 2.5em;
+  font-size: 0.75em;
+}
+
+.aegov-font-size .aegov-btn.btn-icon {
+  width: 3em;
+  height: 3em;
+}
+
+.aegov-font-size .aegov-btn>svg {
+  width: 1.25em;
+  height: 1.25em;
+}

@@ -1,0 +1,333 @@
+.rtl\:rotate-180:where([lang=ar], [lang=ar] *) {
+    --tw-rotate: 180deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
+.rtl\:-scale-x-100:where([lang=ar], [lang=ar] *) {
+    --tw-scale-x: -1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
+.rtl\:space-x-reverse:where([lang=ar], [lang=ar] *) > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 1
+}
+
+.rtl\:font-alexandria:where([lang=ar], [lang=ar] *) {
+    font-family: Alexandria, Helvetica Neue, ui-sans-serif, system-ui, sans-serif
+}
+
+.rtl\:\!leading-snug:where([lang=ar], [lang=ar] *) {
+    line-height: 1.375 !important
+}
+
+.rtl\:\[direction\:ltr\]:where([lang=ar], [lang=ar] *) {
+    direction: ltr
+}
+
+.pos-sticky {
+    position: sticky !important;
+}
+
+.text-left-only {
+    text-align: left !important;
+}
+
+.text-right-only {
+    text-align: right !important;
+}
+
+.aegov-tooltip-container {
+    position: relative;
+}
+
+    .aegov-tooltip-container:hover .aegov-tooltip {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+.aegov-tooltip {
+    position: absolute;
+    top: 0;
+    transform: translateY(-105%);
+    width: 240px;
+    color: white;
+    background: var(--clr-black-900);
+    border-radius: 0.5em;
+    padding: 0.5em 1.5em;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+    .aegov-tooltip:hover {
+        opacity: 1;
+        pointer-events: none;
+    }
+
+    .aegov-tooltip::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -5px;
+        transform: translate(-25%, 25%);
+        width: 12px;
+        height: 12px;
+        background: var(--clr-black-900);
+        border-radius: 0.25em;
+        rotate: 45deg;
+    }
+
+.page-title-container {
+    margin-bottom: 2em;
+}
+
+.page-title {
+    font-size: 2em;
+    color: var(--clr-black-900);
+    margin: 0;
+}
+
+.rounded-top-2 {
+    border-radius: 0.5em 0.5em 0 0;
+}
+
+.rounded-top-3 {
+    border-radius: 1em 1em 0 0;
+}
+
+.rounded-bottom-2 {
+    border-radius: 0 0 0.5em 0.5em;
+}
+
+.rounded-bottom-3 {
+    border-radius: 0 0 1em 1em;
+}
+
+.aegov-font-size {
+    font-size: var(--aegov-font-size);
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0 !important;
+}
+
+.flex-grow-1 {
+    flex-grow: 1 !important;
+}
+
+.vr {
+    height: 3rem;
+    border-right: 1px solid #eee;
+}
+
+.mt-\[96px\] {
+    margin-top: 96px;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+.aegov-shadow-primary {
+    box-shadow: 0 0 #0000, 0 20px 25px -5px rgb(182 138 53 / .3), 0 8px 10px -6px rgb(182 138 53 / .3);
+}
+
+.aegov-shadow {
+    box-shadow: 0px 8px 12px -3px #7C5E2429;
+}
+
+.border-gray-400 {
+    border-color: var(--color-gray-400) !important;
+}
+
+.w-fit {
+    width: fit-content !important;
+}
+
+.w-4 {
+    width: 1rem !important;
+}
+
+.w-8 {
+    width: 2rem !important;
+}
+
+.w-16 {
+    width: 4rem !important;
+}
+
+.w-20 {
+    width: 5rem !important;
+}
+
+.w-24 {
+    width: 6rem !important;
+}
+
+.w-28 {
+    width: 7rem !important;
+}
+
+.w-32 {
+    width: 8rem !important;
+}
+
+.w-40 {
+    width: 10rem !important;
+}
+
+.w-44 {
+    width: 11rem !important;
+}
+
+.w-48 {
+    width: 12rem !important;
+}
+
+.h-auto {
+    height: auto !important;
+}
+
+.h-4 {
+    height: 1rem !important;
+}
+
+.h-8 {
+    height: 2rem !important;
+}
+
+.h-16 {
+    height: 4rem !important;
+}
+
+.h-20 {
+    height: 5rem !important;
+}
+
+.h-24 {
+    height: 6rem !important;
+}
+
+.h-28 {
+    height: 7rem !important;
+}
+
+.h-32 {
+    height: 8rem !important;
+}
+
+.h-40 {
+    height: 10rem !important;
+}
+
+.h-44 {
+    height: 11rem !important;
+}
+
+.h-48 {
+    height: 12rem !important;
+}
+
+.z-1 {
+    z-index: 1 !important;
+}
+
+.aegov-carousel .carousel-indicators, .aegov-carousel .carousel-control {
+    display: none;
+}
+
+.aegov-carousel .carousel-inner {
+    overflow: visible;
+}
+
+.aegov-carousel .aegov-carousel-indicators {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding-block: 1em;
+}
+
+.aegov-carousel .item {
+    animation: fadeInLeft 0.5s ease-in-out;
+}
+
+.aegov-carousel .aegov-carousel-indicators button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    padding: 1em;
+}
+
+.aegov-custom-tooltip-container {
+    position: relative;
+}
+
+.aegov-custom-tooltip-container .aegov-custom-tooltip-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(calc(100% + 2em));
+    background: #1b1d21;
+    color: #fff;
+    padding: 1em;
+    border-radius: 0.5em;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+    .aegov-custom-tooltip-container .aegov-custom-tooltip-bottom::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 45%;
+        transform: translate(-35%, -35%);
+        background: #1b1d21;
+        border-radius: 0.25em;
+        width: 16px;
+        height: 16px;
+        rotate: 45deg;
+    }
+
+.aegov-custom-tooltip-container:hover .aegov-custom-tooltip-bottom {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.aegov-stepper-vertical-step {
+    position: relative;
+    margin-bottom: 3em;
+}
+
+.aegov-stepper-vertical-step .step-badge{
+    height: 4rem;
+    width: 4rem;
+    color: #fff;
+    font-weight: 600;
+    background-color: var(--clr-primary-600);
+    border: 1px solid var(--clr-primary-100);
+    border-radius: 50%;
+    outline: 2px solid var(--clr-primary-100);
+    outline-offset: 2px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.aegov-stepper-vertical-step:not(:last-child)::before {
+    content: '';
+    width: 0.188rem;
+    height: calc(100% - 10px);
+    position: absolute;
+    inset-inline-start: 1.25rem;
+    bottom: 0;
+    background-color: var(--clr-primary-600);
+    transform: translateY(calc(100% + 5px));
+    margin-inline-start: 0.675rem;
+}

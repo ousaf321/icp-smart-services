@@ -1,0 +1,6 @@
+.header,.purchase, .breadcrumbs,.footer-v1, #vox, #subscribe_to_newsletter, .sidebar_img_lnk, .backBtn, .InnerRightPanel, #foo, #topcontrol, #livechat-compact-container {visibility:hidden;display:none;}
+.printFullpane{width:100%;}
+a:link:after,a:visited:after{content:"" !important;font-size:90%}
+.setToggleContent{display:block !important;}
+.setToggleControl i.fa-plus{display:none;}
+.serviceContent .publications li{max-height:280px;}

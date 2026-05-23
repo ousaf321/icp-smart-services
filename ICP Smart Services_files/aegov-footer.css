@@ -1,0 +1,70 @@
+.aegov-footer {
+  font-size: var(--aegov-font-size);
+  position: relative;
+  background-color: var(--clr-black-50);
+  padding-top: .5em
+}
+
+.aegov-footer ol, .aegov-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.aegov-footer:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: .5em;
+  width: 100%;
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  --tw-gradient-from: #CBA344 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(203 163 68 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #92722A var(--tw-gradient-to-position)
+}
+
+.aegov-footer .footer-top {
+  padding-block: 3em;
+}
+
+.aegov-footer .footer-top ul li ul li:not(:first-of-type) {
+  margin-top: 0.5em;
+}
+
+p.aegov-footer a {
+  margin-bottom: 1.75em
+}
+
+.aegov-footer a {
+  font-size: .875em;
+  line-height: 1.25em;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(62 64 70 / var(--tw-text-opacity, 1));
+  text-decoration-line: none
+}
+
+.aegov-footer h3 {
+  font-size: 1.25em;
+  font-weight: 600;
+  color: var(--clr-primary-600);
+  margin-top: 0;
+}
+
+.aegov-footer a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(146 114 42 / var(--tw-text-opacity, 1))
+}
+
+.aegov-footer .footer-bottom {
+  border-top: 1px solid rgb(225 227 229);
+  padding-block: 3em;
+}
+
+@media (min-width: 1280px) {
+  .aegov-footer a {
+    font-size: 1em;
+    line-height: 1.5em
+  }
+}

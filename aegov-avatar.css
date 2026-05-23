@@ -1,0 +1,118 @@
+.aegov-avatar {
+    font-size: var(--aegov-font-size);
+    position: relative;
+    display: inline-block;
+    height: 2.5em;
+    width: 2.5em
+}
+
+.aegov-avatar>img {
+    height: 100%;
+    width: 100%;
+    border-radius: .25em;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.aegov-avatar>span.alert-indicator {
+    position: absolute;
+    right: -.25em;
+    top: -.25em;
+    display: block;
+    height: .625em;
+    width: .625em;
+    border-radius: 9999px;
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+}
+
+.aegov-avatar.avatar-xs {
+    height: 1.5em;
+    width: 1.5em
+}
+
+.aegov-avatar.avatar-xs>span.alert-indicator {
+    height: .375em;
+    width: .375em
+}
+
+.aegov-avatar.avatar-sm {
+    height: 2em;
+    width: 2em
+}
+
+.aegov-avatar.avatar-sm>span.alert-indicator {
+    height: .5em;
+    width: .5em
+}
+
+.aegov-avatar.avatar-base {
+    height: 2.5em;
+    width: 2.5em
+}
+
+.aegov-avatar.avatar-base>span.alert-indicator {
+    height: .625em;
+    width: .625em
+}
+
+.aegov-avatar.avatar-lg {
+    height: 3em;
+    width: 3em
+}
+
+.aegov-avatar.avatar-lg>img {
+    border-radius: .375em
+}
+
+.aegov-avatar.avatar-lg>span.alert-indicator {
+    height: .75em;
+    width: .75em
+}
+
+.aegov-avatar.avatar-xl {
+    height: 3.5em;
+    width: 3.5em
+}
+
+.aegov-avatar.avatar-xl>img {
+    border-radius: .375em
+}
+
+.aegov-avatar.avatar-xl>span.alert-indicator {
+    height: .875em;
+    width: .875em
+}
+
+.aegov-avatar.avatar-2xl {
+    height: 4em;
+    width: 4em
+}
+
+.aegov-avatar.avatar-2xl>img {
+    border-radius: .5em
+}
+
+.aegov-avatar.avatar-2xl>span.alert-indicator {
+    height: 1em;
+    width: 1em
+}
+
+.aegov-avatar.avatar-3xl {
+    height: 5em;
+    width: 5em
+}
+
+.aegov-avatar.avatar-3xl>img {
+    border-radius: .5em
+}
+
+.aegov-avatar.avatar-3xl>span.alert-indicator {
+    height: 1.25em;
+    width: 1.25em
+}
+
+.aegov-avatar.avatar-rounded>img {
+    border-radius: 9999px
+}

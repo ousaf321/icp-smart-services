@@ -1,0 +1,127 @@
+.aegov-accordion {
+  font-size: var(--aegov-font-size);
+}
+
+.aegov-accordion .panel .accordion-toggle {
+  font-size: var(--aegov-font-size);
+}
+
+.aegov-accordion.aegov-accordion-sm-header .panel-heading .panel-title .accordion-toggle span {
+  font-size: 0.875em;
+  color: var(--clr-black-500);
+}
+
+.aegov-accordion .accordion-item {
+  border-bottom-width: 1px;
+  border-color: rgb(225 227 229);
+  border-radius: 1em;
+}
+
+.aegov-accordion .accordion-item.accordion-has-badges .accordion-toggle > span {
+  display: block;
+  max-width: 100%;
+  padding-inline-end: 2em;
+}
+
+.aegov-accordion .accordion-item.accordion-has-badges .accordion-toggle .accordion-badge {
+  display: flex !important;
+}
+
+.aegov-accordion .accordion-item.accordion-has-badges.panel-open .accordion-toggle .accordion-badge {
+  display: none !important;
+}
+
+.aegov-accordion .accordion-item .panel-heading, .aegov-accordion .panel-group .accordion-item .panel-heading  {
+  background: transparent;
+}
+
+.aegov-accordion .accordion-item.accordion-user-icon .panel-heading a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aegov-accordion .accordion-item.accordion-user-icon .panel-heading a span {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.aegov-accordion .accordion-item.accordion-user-icon .panel-heading a span::before {
+  font-family: 'Phosphor' !important;
+  content: "\e68e" !important;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.aegov-accordion .accordion-item.accordion-no-icon .panel-heading .accordion-toggle.accordion-toggle span::before {
+  content: "none" !important;
+  display: none !important;
+}
+
+.aegov-accordion .accordion-item .panel-heading .panel-title {
+  background: transparent;
+}
+
+.aegov-accordion .accordion-item .panel-heading .panel-title .accordion-toggle {
+  position: relative;
+  color: var(--clr-primary-800) !important;
+  text-decoration: none;
+  padding: 1.5em;
+}
+
+.aegov-accordion .accordion-item .panel-heading .panel-title .accordion-toggle::after {
+  float: unset;
+  position: absolute;
+  inset-inline-end: 2em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.aegov-accordion .accordion-item .panel-heading .panel-title .accordion-toggle[aria-expanded='true']::after {
+  font-family: 'Phosphor' !important;
+  content: "\e13c" !important;
+}
+
+.aegov-accordion .accordion-item .panel-heading .panel-title .accordion-toggle[aria-expanded='false']::after {
+  font-family: 'Phosphor' !important;
+  content: "\e136" !important;
+}
+
+.aegov-accordion .accordion-item .panel-body, .aegov-accordion .panel-group .accordion-item .panel-body {
+  border-top: none !important;
+  padding: 1.5em;
+  padding-top: 0.5em;
+}
+
+.aegov-accordion .accordion-title button {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  color: rgb(35 37 40);
+}
+
+.aegov-accordion .accordion-title button:hover,
+.aegov-accordion .accordion-title button.accordion-active {
+  color: rgb(146 114 42)
+}
+
+.aegov-accordion .accordion-title button svg {
+  color: inherit
+}
+
+.aegov-accordion:not(.aegov-mobile-accordion) .accordion-title button {
+  padding: 1rem .75rem
+}
+
+.aegov-accordion:not(.aegov-mobile-accordion) .accordion-title button:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-offset-shadow: 0 0 0 0 #fff;
+  --tw-ring-shadow: 0 0 0 calc(2px + 0) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-color: rgb(248 192 39);
+}

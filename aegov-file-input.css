@@ -1,0 +1,112 @@
+.aegov-form-control.aegov-file-input-control .file-input-label {
+    margin: 0;
+    display: inline-flex !important;
+    flex-shrink: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+    color: rgb(255 255 255 / 1) !important;
+    text-decoration-line: none
+}
+
+.aegov-form-control.aegov-file-input-control .file-input-label.file-input-disabled {
+    opacity: .4
+}
+
+.aegov-form-control.aegov-file-input-control input[type=file] {
+    display: none
+}
+
+.aegov-form-control.aegov-file-input-control .file-input-summary {
+    margin-top: 1rem
+}
+
+.aegov-form-control.aegov-file-input-control .file-input-summary>:not([hidden])~:not([hidden]) {
+    margin-top: 1rem;
+    margin-bottom: 0
+}
+
+.aegov-form-control.aegov-file-input-control .file-input-summary .file-input-summary-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .75rem;
+    text-align: center;
+    font-weight: 500;
+    color: rgb(95 100 109 / 1)
+}
+
+.aegov-form-control .form-control-dropbox:focus {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / .1), 0 2px 4px -2px rgb(0 0 0 / .1)
+}
+
+.aegov-form-control .form-control-dropbox svg {
+    margin-left: auto;
+    margin-right: auto;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: rgb(203 213 225 / 1)
+}
+
+@media (min-width: 1280px) {
+    .aegov-form-control .form-control-dropbox svg {
+        height: 3rem;
+        width: 3rem
+    }
+}
+
+.aegov-form-control .form-control-dropbox label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: .5rem;
+    background-color: rgb(255 255 255 / 1);
+    font-weight: 600;
+    color: rgb(146 114 42 / 1)
+}
+
+.aegov-form-control .form-control-dropbox label:focus-within {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px rgb(248 192 39 / 1);
+}
+
+.aegov-form-control .form-control-dropbox label:hover {
+    color: rgb(182 138 53 / 1)
+}
+
+.aegov-form-control.control-error .form-control-dropbox {
+    border-color: rgb(244 122 117 / 1);
+    background-color: rgb(254 242 242 / 1)
+}
+
+.aegov-form-control.control-error .form-control-dropbox svg {
+    color: rgb(203 213 225 / 1)
+}
+
+.aegov-form-control.control-error .form-control-dropbox label {
+    background-color: rgb(254 242 242 / 1);
+    color: rgb(216 55 49 / 1)
+}
+
+.aegov-form-control.control-error .form-control-dropbox label:focus-within {
+    box-shadow: 0 0 0 2px rgb(216 55 49 / 1);
+}
+
+.aegov-form-control.control-error .form-control-dropbox label:hover {
+    color: rgb(234 79 73 / 1)
+}
+
+.aegov-dashed-file-uploader {
+    border: 1px dashed rgb(203 213 225 / 1);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}

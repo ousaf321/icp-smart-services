@@ -1,0 +1,66 @@
+.tree-dropdown {
+   position: relative;
+   display: block;
+   font-size: 13px;
+   width: 100%;
+}
+
+.tree-dropdown .select {
+   padding: 0 10px;
+   height: 32px;
+   display: block;
+   line-height: 14px;
+   color: #333333;
+   vertical-align: middle;
+   background-color: #ffffff;
+   border: 1px solid #cccccc;
+   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.tree-dropdown .select::after {
+   content: " ";
+   width: 0;
+   height: 0;
+   border-left: 4px solid transparent;
+   border-right: 4px solid transparent;
+   border-top: 5px solid #CDCDCD;
+   position: absolute;
+   right: 10px;
+   top: 13px;
+}
+
+.tree-dropdown p {
+   line-height: 32px;
+   margin: 0;
+}
+
+.tree-dropdown .list{
+   background-color: #FFF;
+   border-style: solid;
+   border-color: #cccccc;
+   border-width: 1px 1px 1px 1px;
+   z-index: 1100;
+   overflow-x: hidden;
+   max-height: 300px;
+   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+.tree-dropdown ul {
+   list-style-type: none;
+}
+
+.tree-dropdown ul:first-child { 
+   padding: 0px;
+}
+
+.tree-dropdown .list p:hover{
+   background: #eee;
+}
+
+.tree-dropdown .list p.selected{
+   background: #DDDBFF;
+}

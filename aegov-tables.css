@@ -1,0 +1,150 @@
+table.aegov-table.table-primary thead tr th {
+  background: #fbfbfb;
+  color: #8b8b8b;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+  table.aegov-table.table-primary thead tr th:not(:last-of-type) {
+    border-inline-end: 1px solid #f3f4f6;
+  }
+
+table.aegov-table.table-primary tbody tr:not(:last-of-type) td {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+table.aegov-table.table-primary tbody tr:hover {
+  background: #f8fafc;
+}
+
+table.aegov-table.table-primary tbody tr td:not(:last-of-type) {
+  border-inline-end: 1px solid #f3f4f6;
+}
+
+table.aegov-table.table-primary {
+  width: 100%;
+  border-collapse: separate;
+  border: 1px solid var(--clr-black-100);
+  border-radius: 1em;
+}
+
+table.aegov-table {
+    width: 100%;
+    border-collapse: separate;
+    border: 1px solid var(--clr-black-100);
+    border-radius: 1em;
+}
+
+table.aegov-table thead tr th {
+    color: #ffffff;
+    background-color: #475569;
+    border: none;
+    padding: 1em;
+}
+
+table.aegov-table thead th:first-of-type {
+    border-start-start-radius: 1em;
+}
+
+table.aegov-table thead th:last-of-type {
+    border-start-end-radius: 1em;
+}
+
+table.aegov-table tbody tr td {
+    border: none;
+    padding: 1em;
+}
+
+table.aegov-table tbody tr:nth-of-type(odd):not(:only-child) td {
+    background:var(--clr-black-50);
+}
+
+table.aegov-table tbody tr:last-of-type td:first-of-type {
+    border-end-start-radius: 1em;
+}
+
+table.aegov-table tbody tr:last-of-type td:last-of-type {
+    border-end-end-radius: 1em;
+}
+
+table.aegov-table tfoot tr td {
+    background-color: transparent;
+    padding: 1em;
+}
+
+table tbody:has(.aegov-expanded-tr) {
+    background-color: var(--clr-primary-600);
+    border-inline-start: 4px solid var(--clr-primary-600);
+}
+
+table tbody:has(.aegov-expanded-tr) td{
+    color: var(--clr-primary-600);
+    background-color: var(--clr-primary-50);
+    border: 1px solid var(--clr-black-50) !important;
+}
+
+table tbody .aegov-expanded-tr td{
+    padding: 8px !important;
+}
+
+table tbody:has(.aegov-expanded-tr) td .action_li .btn{
+    background-color: var(--clr-primary-600);
+    border-color: var(--clr-primary-600);
+}
+
+.aegov-pagination {
+    font-size: var(--aegov-font-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.aegov-pagination .pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.aegov-pagination .pagination li {
+    margin-inline-start: 0.25em;
+}
+
+.aegov-pagination .pagination li a {
+    height: 2em;
+    width: 2em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-size: 1em;
+    line-height: 1.5em;
+    border: none;
+    border-radius: 9999px;
+    transition: background-color 0.2s, color 0.2s;
+    clear: both;
+}
+
+.aegov-pagination .pagination li a:hover {
+    background-color: var(--clr-primary-100);
+    color: var(--clr-primary-800);
+}
+
+.aegov-pagination .pagination > .active > a {
+    background-color: var(--clr-primary-500);
+    color: #ffffff;
+}
+
+.aegov-standalone-table {
+    border: 1px solid var(--clr-black-100);
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.aegov-standalone-table .aegov-standalone-table-row {
+    padding: 1em;
+}
+
+.aegov-standalone-table .aegov-standalone-table-row:nth-of-type(2n) {
+    background-color: var(--clr-black-50);
+}

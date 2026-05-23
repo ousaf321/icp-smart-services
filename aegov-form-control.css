@@ -1,0 +1,499 @@
+/*The html font size is 10px, change everything inside here to "em" instead of "rem" to affect everything*/
+/* .aegov-form-control {
+  font-size: 14px;
+} */
+
+.aegov-form-control-sm {
+    --aegov-form-control-padding: 0.5em 1em;
+}
+
+.aegov-form-control input[type=text],
+.aegov-form-control input[type=email],
+.aegov-form-control input[type=url],
+.aegov-form-control input[type=password],
+.aegov-form-control input[type=number],
+.aegov-form-control input[type=date],
+.aegov-form-control input[type=datetime-local],
+.aegov-form-control input[type=month],
+.aegov-form-control input[type=search],
+.aegov-form-control input[type=tel],
+.aegov-form-control input[type=time],
+.aegov-form-control input[type=week],
+.aegov-form-control [multiple],
+.aegov-form-control textarea,
+.aegov-form-control select {
+    display: block;
+    width: 100%;
+    height: unset;
+    flex: 1 1 0%;
+    border: none;
+    background-color: transparent;
+    padding: var(--aegov-form-control-padding);
+    font-size: 1em;
+    line-height: 1.5em;
+    --tw-text-opacity: 1;
+    color: rgb(93 59 38 / var(--tw-text-opacity, 1));
+}
+
+/* .aegov-form-control .form-control-input:has(input:disabled) {
+  opacity: 0.4;
+} */
+
+.aegov-form-control select {
+    appearance: none;
+    padding-inline-end: 2.5em;
+}
+
+.aegov-form-control tahaluf-select {
+    width: 100%;
+}
+
+    .aegov-form-control tahaluf-select .input-group-addon {
+        border: none;
+        border-end-start-radius: 0.5em;
+        border-start-start-radius: 0.5em;
+        box-shadow: inset 0 0 0 2px var(--clr-primary-400);
+    }
+
+    /*Omar: !!!IMPORTANT USED*/
+    .aegov-form-control tahaluf-select .select2-container {
+        border-start-start-radius: 0 !important;
+        border-end-start-radius: 0 !important;
+    }
+
+html:lang(ar) .selector-container {
+    direction: rtl;
+}
+
+.aegov-form-control .selector-container {
+    width: 100%;
+    text-shadow: none;
+}
+
+    .aegov-form-control .selector-container .selector-input {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+        /*Omar: !!!IMPORTANT USED*/
+        .aegov-form-control .selector-container .selector-input input {
+            margin: 0;
+            padding: 0 !important;
+            line-height: 1.35em;
+        }
+
+.aegov-form-control .form-control-input.editable-input:has(input:disabled) {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+    .aegov-form-control .form-control-input.editable-input:has(input:disabled) input {
+        color: var(--clr-primary-800);
+        font-weight: 700;
+        padding: 0;
+    }
+
+.aegov-form-control .form-control-input:has(input:disabled) {
+    opacity: 0.4;
+}
+
+.aegov-form-control .form-control-input .countrycode-group {
+    margin: 0;
+}
+
+.aegov-form-control .form-control-input .countrycode-addon {
+    transform: scale(0.975,0.9);
+}
+
+/*Omar: !!!IMPORTANT USED*/
+.aegov-form-control .form-control-input:has(.select2-dropdown-open) {
+    opacity: 1 !important;
+}
+
+.aegov-form-control .form-control-input:has(select)::after {
+    font-family: 'Phosphor' !important;
+    content: "\e136" !important;
+    position: absolute;
+    inset-inline-end: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.aegov-form-control .ng-not-empty.ng-valid-validation.ng-valid {
+    border: none;
+}
+
+.aegov-form-control .form-control-input input:-internal-autofill-selected {
+    border-radius: 1em;
+    box-shadow: inset 0 0 9998px white;
+    transform: scaleY(0.9) scaleX(0.99);
+}
+
+.aegov-form-control .form-control-input country-code .select-dropdown-control {
+    display: block;
+    position: relative;
+    transform: none;
+    text-wrap: nowrap;
+    width: 200px;
+}
+
+.aegov-form-control .form-control-input country-code tahaluf-dropdownlist .ui-select-container {
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.aegov-form-control .form-control-input country-code .ui-select-container .select2-choice {
+    border-inline-end: 1px solid var(--clr-primary-500);
+}
+
+.aegov-form-control .form-control-input .validation {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    inset-inline-start: 0;
+}
+
+.aegov-form-control .form-control-input .input-group-addon {
+    border: none;
+}
+
+/*Omar: should be removed !!!IMPORTANT USED*/
+.aegov-form-control .form-control-input.control-input-no-shadow {
+    box-shadow: none;
+    background-color: transparent;
+}
+
+    /*Omar: should be removed !!!IMPORTANT USED*/
+    .aegov-form-control .form-control-input.control-input-no-shadow .form-control {
+        width: 100%;
+        height: unset;
+        line-height: unset;
+        background: transparent;
+        border: none;
+        border-radius: 0.5em;
+        box-shadow: inset 0 0 0 2px var(--clr-primary-400);
+        padding: var(--aegov-form-control-padding);
+    }
+
+/*Omar: should be removed !!!IMPORTANT USED*/
+.aegov-form-control .form-control-input tahaluf-local-address {
+    width: 100%;
+}
+
+    /*Omar: should be removed !!!IMPORTANT USED*/
+    .aegov-form-control .form-control-input tahaluf-local-address .validation.select-dropdown-control {
+        position: relative !important;
+        transform: unset !important;
+    }
+
+.aegov-form-control .form-control-input .validation:empty {
+    display: none;
+}
+
+.aegov-form-control .form-control-input .tahalufselectdrop .input-group-addon.tahalufselect input {
+    border: none;
+}
+
+.aegov-form-control .form-control-input.form-control-input-no-input {
+    padding: var(--aegov-form-control-padding);
+}
+
+.aegov-form-control:has(.validation.text-danger:not(:empty)) {
+    margin-bottom: 2em;
+}
+
+.aegov-form-control.custom-validation .form-control-input:has(.validation) .validation {
+    display: none;
+}
+
+.aegov-form-control.custom-validation .form-control-input:has(.validation) input {
+    padding-inline-end: 3em;
+}
+
+.aegov-form-control.custom-validation .form-control-input:has(.validation)::before {
+    content: "\e4e2";
+    font-family: "Phosphor" !important;
+    position: absolute;
+    inset-inline-end: 0.5em;
+    font-size: 2.25em;
+    color: rgb(216 55 49);
+}
+
+.aegov-form-control.custom-validation .form-control-input:has(.validation) .control-suffix {
+    padding-inline-end: 3em;
+}
+
+.aegov-form-control label {
+    margin-bottom: .25em;
+    display: block;
+    font-size: .875em;
+    font-weight: 500;
+    line-height: 1.5em;
+    color: var(--clr-black-800);
+}
+
+.aegov-form-control .form-control-input {
+    position: relative;
+    display: flex;
+    border-radius: .5em;
+    background-color: rgb(255 255 255);
+    box-shadow: inset 0 0 0 2px var(--clr-primary-400);
+}
+
+    .aegov-form-control .form-control-input tahaluf-dropdownlist {
+        width: 100%;
+        border: none;
+    }
+
+    /*!!!IMPORTANT USED*/
+    .aegov-form-control .form-control-input .ui-select-container {
+        position: relative;
+        display: flex;
+        border-radius: .5em;
+        background-color: rgb(255 255 255);
+        border: none !important;
+        --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / .05);
+        --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+        --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+        box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+        --tw-ring-inset: inset;
+        --tw-ring-color: var(--clr-primary-400);
+    }
+
+        .aegov-form-control .form-control-input .ui-select-container .select2-choice {
+            width: 100%;
+            height: unset;
+            line-height: unset;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            padding: var(--aegov-form-control-padding);
+        }
+
+            .aegov-form-control .form-control-input .ui-select-container .select2-choice .select2-arrow {
+                width: 1em;
+                margin-inline-end: 1em;
+            }
+
+                .aegov-form-control .form-control-input .ui-select-container .select2-choice .select2-arrow b {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: 400;
+                }
+
+                    .aegov-form-control .form-control-input .ui-select-container .select2-choice .select2-arrow b::before {
+                        font-family: 'Phosphor' !important;
+                        content: "\e136" !important;
+                        font-size: 1em;
+                    }
+
+            /*!!!IMPORTANT USED*/
+            .aegov-form-control .form-control-input .ui-select-container .select2-choice > .select2-chosen {
+                margin: unset !important;
+                padding-inline-end: 3.5em;
+            }
+
+            .aegov-form-control .form-control-input .ui-select-container .select2-choice .select2-chosen button {
+                right: unset;
+                left: unset;
+                inset-inline-end: 2.5em;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+        .aegov-form-control .form-control-input .ui-select-container .select2-drop {
+            margin-top: 0.25em;
+        }
+
+.aegov-form-control tahaluf-dropdownlist:has(.select2.open) {
+    z-index: 1000;
+}
+
+.aegov-form-control .form-control-input .ui-select-container .select2-drop-active {
+    border: 1px solid #5897fb;
+}
+
+/*!!!IMPORTANT USED*/
+.aegov-form-control .form-control-input .ui-select-container .select2-drop .select2-input {
+    border-radius: 0.5em;
+    box-shadow: inset 0 0 0 2px var(--clr-primary-400);
+    padding: var(--aegov-form-control-padding) !important;
+    padding-inline-end: 1.5em !important;
+    margin-top: 0.25em;
+}
+
+.aegov-form-control .form-control-input .ui-select-container .select2-drop .select2-search::before {
+    font-family: 'Phosphor' !important;
+    content: "\e30c" !important;
+    font-size: 1em;
+    position: absolute;
+    top: 50%;
+    inset-inline-end: 1em;
+    transform: translateY(-50%);
+}
+/*!!!IMPORTANT USED*/
+.aegov-form-control .form-control-input .ui-select-container.ui-select-multiple .select2-choices {
+    width: 100%;
+    border: none;
+    background-color: transparent !important;
+    padding: 0 !important;
+}
+
+    .aegov-form-control .form-control-input .ui-select-container.ui-select-multiple .select2-choices .select2-search-field {
+        position: static;
+        border: none;
+        background-color: transparent;
+    }
+
+        .aegov-form-control .form-control-input .ui-select-container.ui-select-multiple .select2-choices .select2-search-field input {
+            padding: var(--aegov-form-control-padding);
+            margin: 0;
+        }
+
+.aegov-form-control .form-control-input:focus-within {
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+    --tw-ring-inset: inset;
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(248 192 39 / var(--tw-ring-opacity, 1))
+}
+
+.aegov-form-control .form-control-input:focus {
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / .1), 0 2px 4px -2px rgb(0 0 0 / .1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.aegov-form-control .form-control-input .control-prefix,
+.aegov-form-control .form-control-input .control-suffix {
+    display: flex;
+    user-select: none;
+    align-items: center;
+    color: var(--clr-black-300);
+}
+
+.aegov-form-control .form-control-input .control-prefix {
+    padding-inline-start: 1em
+}
+
+.aegov-form-control .form-control-input .control-suffix {
+    padding-inline-end: 1em
+}
+
+    .aegov-form-control .form-control-input .control-prefix > svg,
+    .aegov-form-control .form-control-input .control-suffix > svg {
+        height: 1.5em;
+        width: 1.5em;
+        fill: currentColor
+    }
+
+.aegov-form-control.control-secondary .form-control-input {
+    box-shadow: inset 0 0 0 2px var(--clr-black-400);
+}
+
+    .aegov-form-control.control-secondary .form-control-input:focus-within {
+        --tw-ring-color: var(--clr-info-300);
+    }
+
+    .aegov-form-control.control-secondary .form-control-input input[type=date] + .control-suffix svg:focus-within,
+    .aegov-form-control.control-secondary .form-control-input input[type=datetime-local] + .control-suffix svg:focus-within,
+    .aegov-form-control.control-secondary .form-control-input input[type=month] + .control-suffix svg:focus-within {
+        --tw-ring-color: var(--clr-info-300);
+    }
+
+    .aegov-form-control.control-secondary .form-control-input:focus-within .control-prefix {
+        color: var(--clr-black-900);
+    }
+
+    .aegov-form-control.control-secondary .form-control-input:focus-within .control-suffix {
+        color: var(--clr-black-900);
+    }
+
+    .aegov-form-control.control-secondary .form-control-input input[type=search] + .control-suffix:focus-within {
+        --tw-text-opacity: 1 !important;
+        color: rgb(44 202 255 / var(--tw-text-opacity, 1)) !important;
+        outline: 2px solid transparent;
+        outline-offset: 2px
+    }
+
+.aegov-form-control.control-secondary select {
+    padding-inline-end: 2.25em;
+    padding-inline-start: 1em;
+    color: var(--clr-black-900);
+}
+
+    .aegov-form-control.control-secondary select:where([dir=rtl], [dir=rtl] *) {
+        background-position: .5em
+    }
+
+.aegov-form-control .form-control-input:has(.ng-invalid-validation), .aegov-form-control .ng-invalid-validation .ui-select-container {
+    box-shadow: inset 0 0 0 2px var(--clr-danger-400);
+    background: var(--clr-danger-50);
+}
+
+.aegov-form-control.control-sm .form-control-input {
+    font-size: .875em;
+    line-height: 1.25em
+}
+
+    .aegov-form-control.control-sm .form-control-input input {
+        padding-top: .625em;
+        padding-bottom: .625em;
+        font-size: .875em;
+        line-height: 1.25em
+    }
+
+    .aegov-form-control.control-sm .form-control-input select {
+        padding-top: .625em;
+        padding-bottom: .625em;
+        font-size: .875em;
+        line-height: 1.25em
+    }
+
+    .aegov-form-control.control-sm .form-control-input textarea {
+        padding-top: .625em;
+        padding-bottom: .625em;
+        font-size: .875em;
+        line-height: 1.25em
+    }
+
+    .aegov-form-control.control-sm .form-control-input input[type=file]::file-selector-button {
+        padding-top: .625em;
+        padding-bottom: .625em
+    }
+
+    .aegov-form-control.control-sm .form-control-input .control-prefix > svg,
+    .aegov-form-control.control-sm .form-control-input .control-suffix > svg {
+        height: 1.25em;
+        width: 1.25em
+    }
+
+.form-btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1em;
+    margin-top: 1.5em;
+}
+
+/*Omar: Check on the whole system in case of problems, needs to be emoved !!!IMPORTANT USED*/
+.tahaluf-new-dropdown .select2-choice {
+    height: unset !important;
+    line-height: unset !important;
+    padding: 0.375em 1em !important;
+}
+
+.tahaluf-new-dropdown .select2-container {
+    border-radius: 0.5em;
+}
+
+    .tahaluf-new-dropdown .select2-container .select2-choice .select2-chosen button {
+        top: 50%;
+        transform: translateY(-50%);
+    }

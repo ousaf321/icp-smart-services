@@ -1,0 +1,168 @@
+ul.steps-indicator > li.current > a {
+  color: #A87935;
+}
+ul.steps-indicator > li.current > a:before {
+  background-color: #A87935;
+}
+#header.bg-echannels .mainnav > ul {
+  background-color: #A87935 !important;
+}
+#header.bg-echannels .mainnav > ul li a:hover {
+  background: #5a411d !important;
+}
+#header.bg-echannels .mainnav > ul li a.active {
+  background: #5a411d !important;
+}
+#header.bg-echannels .mainnav > ul li a:focus {
+  background: #5a411d !important;
+}
+.bg-black .nav > li:hover > a,
+.bg-black .nav > li:focus > a,
+.bg-black .nav > li.active > a {
+  background-color: #A87935 !important;
+}
+.boxes .btn:hover {
+  background: #5a411d !important;
+  border-color: #5a411d !important;
+}
+.help-section > li > span {
+  color: #A87935;
+}
+.help-section > li > span.selected {
+  color: #A87935;
+}
+.help-section > li > ul > li > span:hover {
+  color: #A87935;
+}
+.help-section > li > ul > li > span.selected {
+  color: #A87935;
+}
+.help-section > li > ul > li ul li span:hover {
+  color: #A87935;
+}
+.help-section > li > ul > li ul li span.selected {
+  color: #A87935;
+}
+.help-section.helpsection > div > ul > li:hover {
+  color: #A87935;
+}
+.panel-group .panel-default .panel-heading {
+  border-color: #A87935;
+  background: #A87935;
+}
+#status-buttons > a.currentStep span {
+  background-color: #cc9f5d;
+}
+#status-buttons > a.currentStep:before {
+  background-color: #cc9f5d;
+}
+#status-buttons > a.currentStep:after {
+  background-color: #cc9f5d;
+}
+.rating-sec .face1 .fa,
+.rating-sec .face2 .fa,
+.rating-sec .face3 .fa {
+  color: #A87935;
+}
+.noticlicktrue {
+  color: #A87935;
+}
+.bottomHeader marquee span {
+  color: #815d29;
+}
+.bottomHeader .marqueetitle {
+  color: #A87935;
+}
+.landingServices h2.title {
+  color: #815d29;
+}
+.landingServices .servicedatails ul li i {
+  color: #815d29;
+}
+.btomsection .box_services {
+  background: #A87935;
+}
+.btomsection i {
+  border-bottom-color: #5a411d;
+}
+.btomsection p {
+  border-top-color: #342510;
+}
+.ftrcontent .box-btm .topsec {
+  border-bottom-color: #A87935;
+}
+.ftrcontent .box-btm .topsec i {
+  color: #A87935;
+}
+.footer .social-icons li a:hover {
+  color: #A87935;
+}
+.footer .footer-top a:hover {
+  color: #A87935;
+}
+.dashoboardpage h2 {
+  color: #A87935;
+}
+.dashoboardpage h2 .avalib-cach span {
+  color: #A87935;
+}
+.dashoboardpage h2 .logout {
+  background: #A87935;
+}
+.dashoboardpage .dashboardcontrols .dash-section .icondiv {
+  color: #A87935;
+}
+.dashoboardpage .dashboardcontrols .dash-section .icondiv.hasnoti {
+  background: #A87935;
+}
+.dashoboardpage .dashboardcontrols .dash-section p.count {
+  color: #A87935;
+}
+.dashoboardpage .dashboardcontrols .dash-section .dashboard-noti span.badge {
+  background: #A87935;
+}
+.dashoboardpage .dashboardcontrols .chartsection h4 {
+  color: #A87935;
+}
+.bg-gold {
+  background-color: #A87935 !important;
+  border-color: #A87935 !important;
+}
+.btn-danger {
+  background-color: #A87935;
+  border-color: #A87935;
+}
+a {
+  color: #A87935;
+}
+a:hover,
+a:focus {
+  color: #815d29;
+}
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active,
+.open .dropdown-toggle.btn-danger {
+  background-color: #815d29;
+  border-color: #A87935;
+}
+input[type=range]::-ms-thumb,
+input[type=range]::-ms-fill-lower,
+input[type=range]::-ms-fill-upper {
+  background: #A87935;
+}
+.text-size-slider {
+  color: #A87935;
+}
+.adel-progressbar .round-progress path {
+  stroke: #A87935 !important;
+}
+.box-selected .label-cont:hover {
+  background: #A87935;
+}
+.navbar-nav.cards_ul li a.active {
+  color: #A87935;
+}
+
+/*# sourceMappingURL=app-brown.css.map */

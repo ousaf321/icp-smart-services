@@ -1,0 +1,80 @@
+/*Omar: !!!IMPORTANT USED*/
+.aegov-form-control .selector-container.multiple .selector-input {
+    font-size: var(--aegov-font-size);
+    padding: var(--aegov-form-control-padding) !important;
+    padding-inline-end: 3em !important;
+    margin: 0;
+    overflow: hidden;
+}
+
+/*Omar: !!!IMPORTANT USED*/
+.aegov-form-control .selector-container.multiple.loading .selector-input {
+    padding-inline-start: 3em !important;
+}
+
+/*Omar: !!!IMPORTANT USED*/
+.aegov-form-control .selector-container.multiple.loading .selector-input .selector-helper {
+    right: unset;
+    left: unset;
+    inset-inline-start: 0;
+    margin: 1em;
+}
+
+.aegov-form-control .selector-container.multiple.has-value .selector-input {
+    padding-block: 0.5375em !important;
+}
+
+/*Omar: !!!IMPORTANT USED*/
+.aegov-form-control .selector-container.multiple.has-value .selector-input input {
+    width: 0 !important;
+    height: 0;
+    position: absolute;
+}
+
+.aegov-form-control .selector-container.multiple.remove-button .selector-values .selector-helper {
+    position: static;
+    width: 1em;
+    height: 1em;
+    color: var(--clr-danger-700);
+    font-size: 1.5em;
+    font-weight: 400;
+    background-color: transparent;
+    border: none;
+    flex-shrink: 0;
+}
+
+.aegov-form-control .selector-container.multiple .selector-input .selector-values {
+    float: unset;
+    display: flex;
+    gap: 0.5em;
+}
+
+/*Omar: !!!IMPORTANT USED*/
+.aegov-form-control .selector-container.multiple .selector-values > li {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    color: var(--clr-black-950);
+    line-height: 28px;
+    text-overflow: ellipsis;
+    background: var(--clr-black-50);
+    border: none;
+    box-shadow: none;
+    padding: 0 0.5em !important;
+    margin: 0;
+    overflow: hidden;
+}
+
+.aegov-form-control .selector-container.multiple .selector-input .selector-values li div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.aegov-form-control .selector-container.has-value.remove-button .selector-helper .selector-icon,
+.aegov-form-control .selector-container.has-value.remove-button .selector-helper .selector-icon::after {
+    width: 1em;
+    height: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

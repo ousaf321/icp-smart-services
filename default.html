@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="{{siteLang}}" ng-app="mainApp" ng-controller="baseCtrl">
+<head>
+    <title ng-if="!loadArabicCss">ICP Smart Services</title>
+    <title ng-if="loadArabicCss">الهيئة الاتحادية للهوية والجنسية والجمارك وأمن المنافذ</title>
+    <meta ng-if="!loadArabicCss" name="description" content="You can now apply for all ICP services through ICP smart services portal">
+    <meta ng-if="loadArabicCss" name="description" content="يمكنك الان انجاز جميع معاملات الهيئة الإتحادية للهوية و الجنسية من خلال منظومة الخدمات الذكية">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favica.png" />
+    <!-- Don't Cache -->
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <link href="content/angular-selector.css" rel="stylesheet" />
+    <!-- css -->
+    <link rel="stylesheet" media="all" type="text/css" href="content/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="content/bootstrap/bootstrap-tour.min.css" />
+    <link rel="stylesheet" type="text/css" href="content/bootstrap/bootstrap-switch.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="content/print.css" />
+    <link href="content/font-awesome/font-awesome.css" rel="stylesheet" />
+    <!--Arabic CSS -->
+    <link href="content/bootstrap/bootstrap-rtl.min.css" ng-if="loadArabicCss" rel="stylesheet" />
+
+    <!--End-->
+    <link href="content/animate.css" rel="stylesheet" />
+    <link href="content/simple-line-icons.css" rel="stylesheet" />
+    <link href="content/custom-style.css" rel="stylesheet" />
+    <!-- aegov-styles Public -->
+    <link href="content/aegov-styles/aegov-accordion.css" rel="stylesheet" />
+    <link href="content/aegov-styles/aegov-alert.css" rel="stylesheet" />
+    <link href="content/aegov-styles/aegov-avatar.css" rel="stylesheet" />
+    <link href="content/aegov-styles/aegov-backgrounds.css" rel="stylesheet" />
+    <link href="content/aegov-styles/aegov-badge.css" rel="stylesheet" />
+    <link href="content/aegov-styles/aegov-borders.css" rel="stylesheet" />
+    <link href="content/aegov-styles/aegov-btn.css" rel="stylesheet" />
+    <link href="content/aegov-styles/aegov-card.css" rel="stylesheet" />
+    <link href="content/aegov-styles/aegov-checkboxes.css" rel="stylesheet" />
+    <link href="content/aegov-styles/aegov-file-input.css" rel="stylesheet" />
+    <link href="content/aegov-styles/aegov-footer.css" rel="stylesheet" />
+    <link href="content/aegov-styles/aegov-form-control.css" rel="stylesheet" />
+    <link href="content/aegov-styles/aegov-header.css" rel="stylesheet" />
+    <link href="content/aegov-styles/aegov-menu.css" rel="stylesheet" />
+    <link href="content/aegov-styles/aegov-modal.css" rel="stylesheet" />
+    <link href="content/aegov-styles/aegov-multiselect.css" rel="stylesheet" />
+    <link href="content/aegov-styles/aegov-tab.css" rel="stylesheet" />
+    <link href="content/aegov-styles/aegov-tables.css" rel="stylesheet" />
+    <link href="content/aegov-styles/aegov-typography.css" rel="stylesheet" />
+    <link href="content/aegov-styles/aegov-utilities.css" rel="stylesheet" />
+    <link href="content/aegov-styles/aegov-variables.css" rel="stylesheet" />
+    <!-- aegov-styles -->
+    <link href="content/eChannels.css" rel="stylesheet" />
+    <link href="content/app.css" rel="stylesheet" />
+    <link rel="stylesheet" id="stylesheet-colors" ng-href="content/less-theme/app-{{color}}.css" />
+    <link rel="stylesheet" id="stylesheet-colors2" ng-href="content/less-theme/app-{{color2}}.css" />
+    <link href="content/tree-dropdown.css" rel="stylesheet" />
+    <link href="content/rate.css" rel="stylesheet" />
+    <link href="content/angular-wizard.min.css" rel="stylesheet" />
+    <link href="content/loading-bar.css" rel="stylesheet" />
+    <link href="content/toaster.css" rel="stylesheet" />
+    <link href="content/eChannels-rtl.css" ng-if="loadArabicCss" rel="stylesheet" />
+    <link href="content/Loading.css" rel="stylesheet" />
+    <link href="../scripts/select.css" rel="stylesheet" />
+    <!--<link href="../../content/scannerjs.css" rel="stylesheet" />-->
+    <link href="content/scannerjs.css" rel="stylesheet" />
+    <!--Anguler-->
+    <script>
+        var wpwlOptions = {
+            paymentTarget: "_top",
+            forceCardHolderEqualsBillingName: true
+        }
+    </script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script src="../scripts/tinymce/tinymce.min.js"></script>
+    <script src="../scripts/angular.min.js"></script>
+    <script src="../scripts/angular-route.min.js"></script>
+    <script src="../scripts/angular-animate.min.js"></script>
+    <script src="../scripts/angular-localization.min.js"></script>
+    <script src="../scripts/angular-sanitize.min.js"></script>
+    <script src="../scripts/angular-translate.min.js"></script>
+    <script src="../scripts/angular-translate-loader-partial.min.js"></script>
+    <script src="../scripts/angular-translate-loader-static-files.min.js"></script>
+    <script src="../scripts/angular-ui-router.min.js"></script>
+    <script src="../scripts/angular-validation.min.js"></script>
+    <script src="../scripts/angular-cookies.js"></script>
+    <script src="../scripts/fp.min.js"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript" ng-if="!loadArabicCss">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                includedLanguages: 'af,sq,am,hy,az,eu,be,bn,bs,bg,ca,ceb,zh-CN,zh-TW,co,hr,cs,da,nl,eo,et,fi,fr,fy,gl,ka,de,el,gu,ht,ha,haw,he,hi,hmn,hu,is,ig,id,ga,it,ja,jv,kn,kk,km,rw,ko,ku,ky,lo,la,lv,lt,lb,mk,mg,ms,ml,mt,mi,mr,mn,my,ne,no,ny,or,ps,fa,pl,pt,pa,ro,ru,sm,gd,sr,st,sn,sd,si,sk,sl,so,es,su,sw,sv,tl,tg,ta,tt,te,th,tr,tk,uk,ur,ug,uz,vi,cy,xh,yi,yo,zu,',
+            }, 'google_translate_element');
+
+        }
+    </script>
+    <script type="text/javascript" ng-if="loadArabicCss">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'ar',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                includedLanguages: 'af,sq,am,hy,az,eu,be,bn,bs,bg,ca,ceb,zh-CN,zh-TW,co,hr,cs,da,nl,eo,et,fi,fr,fy,gl,ka,de,el,gu,ht,ha,haw,he,hi,hmn,hu,is,ig,id,ga,it,ja,jv,kn,kk,km,rw,ko,ku,ky,lo,la,lv,lt,lb,mk,mg,ms,ml,mt,mi,mr,mn,my,ne,no,ny,or,ps,fa,pl,pt,pa,ro,ru,sm,gd,sr,st,sn,sd,si,sk,sl,so,es,su,sw,sv,tl,tg,ta,tt,te,th,tr,tk,uk,ur,ug,uz,vi,cy,xh,yi,yo,zu,',
+            }, 'google_translate_element');
+        }
+    </script>
+    <script src="../scripts/angular-wizard.js"></script>
+    <script src="../scripts/vs-google-autocomplete.js"></script>
+    <script src="../scripts/angular-selector.js"></script>
+    <script src="../scripts/ivh-treeview.js"></script>
+    <script src="../scripts/loading-bar.js"></script>
+    <script src="../scripts/toaster.js"></script>
+    <script src="../scripts/mask.js"></script>
+    <script src="../scripts/spin.js"></script>
+    <script src="../scripts/ui-bootstrap-tpls-1.3.3.min.js"></script>
+    <script src="../scripts/sotos.crop-image.js"></script>
+    <script src="../scripts/signalr/jquery-3.4.1.min.js"></script>
+    <script src="../scripts/signalr/jquery.signalR-2.4.3.min.js"></script>
+    <script src="../scripts/signalr/jquery-signalr-hubs.js"></script>
+    <script src="../scripts/iban.js"></script>
+    <script src="../scripts/ocLazyLoad.js"></script>
+    <!--End-->
+    <!--Bootstrap-->
+    <script src="../scripts/bootstrap/ui-bootstrap.js"></script>
+    <script src="../scripts/bootstrap/bootstrap.js"></script>
+    <script src="../scripts/bootstrap/bootstrap-tour.js"></script>
+    <!--End-->
+    <!--Plugins-->
+    <script src="../scripts/ng-map.min.js"></script>
+    <script src="../scripts/ngStorage.js"></script>
+    <script src="../scripts/ngAutocomplete.js"></script>
+    <script src="../scripts/ng-file-upload-shim.js"></script>
+    <script src="../scripts/ng-file-upload.js"></script>
+    <script src="../scripts/smart-table.js"></script>
+    <script src="../scripts/tinymce.js"></script>
+    <script src="../scripts/moment.js"></script>
+    <script src="../scripts/moment-with-locales.js"></script>
+    <script src="../scripts/select.js"></script>
+    <script src="../scripts/angular-recaptcha.js"></script>
+    <script src="../scripts/mime.js"></script>
+    <!--End-->
+    <script id="purecloud-webchat-js"
+            type="text/javascript"
+            src="https://apps.mypurecloud.ie/webchat/jsapi-v1.js"
+            region="eu-west-1"
+            org-guid="cd9f86c5-947d-4f4b-bdf3-d7e4219e5b9c"
+            deployment-key="df75dbbd-af86-4c2e-9a2b-4749c64c625f">
+    </script>
+    <script src="app.js"></script>
+    <script src="google-app.js"></script>
+    <script src="app.routes.js"></script>
+    <script src="framework/services/rememberMeService.js"></script>
+    <script src="framework/directives/tahaluf-tree-viewer.js"></script>
+    <script src="framework/directives/tahaluf-attachments-viewer.js"></script>
+    <script src="framework/directives/tahaluf-ocr.js"></script>
+    <script src="framework/directives/tahaluf-image-crop.js"></script>
+    <script src="framework/directives/csSelect.js"></script>
+    <script src="../framework/services/apiHelperService.js"></script>
+    <script src="../framework/services/notificationsService.js"></script>
+    <script src="../framework/services/lookupService.js"></script>
+    <script src="../framework/services/userService.js"></script>
+    <script src="../framework/services/draftHelperService.js"></script>
+    <script src="framework/services/serviceTransactionService.js"></script>
+    <script src="framework/services/authManagerService.js"></script>
+    <script src="../framework/services/userProfileService.js"></script>
+    <script src="../framework/services/userApplicantService.js"></script>
+    <script src="framework/services/attachmentService.js"></script>
+    <script src="../framework/services/fileService.js"></script>
+    <script src="framework/directives/sakhr.js"></script>
+    <script src="framework/directives/numbersOnly.js"></script>
+    <script src="framework/directives/tahalufSelector.js"></script>
+    <script src="framework/services/mobileAppDetector.js"></script>
+    <script src="framework/services/amwalService.js"></script>
+    <script src="framework/services/multiplePaymentService.js"></script>
+    <!--<script src="../../scripts/scanner.js" type="text/javascript"></script>-->
+    <script src="../scripts/eidatoolkit.js"></script>
+    <script src="../scripts/scanner.js"></script>
+    <!--Controller-->
+    <script src="framework/dialog.js"></script>
+    <script src="framework/controllers/dialogsCtrl.js"></script>
+    <script src="config.js"></script>
+    <script src="framework/directives/tree-dropdown.js"></script>
+    <script src="framework/directives/rate.js"></script>
+    <script src="framework/directives/tahaluf-dropdownlist.js"></script>
+    <script src="framework/directives/usernameAvailable.js"></script>
+    <script src="framework/directives/capitalizeFirst.js"></script>
+    <script src="framework/directives/ng-iban.js"></script>
+    <script src="../scripts/dirPagination.js"></script>
+    <!--<script src="../framework/services/scannerService.js"></script>-->
+    <script src="framework/services/scannerService.js"></script>
+    <script src="../framework/services/signalR-factory.js"></script>
+    <script src="../framework/services/signalrHubProxey.js"></script>
+    <script src="framework/services/uaePassService.js"></script>
+    <script src="framework/baseCtrl.js"></script>
+    <script src="framework/headerCtrl.js"></script>
+    <script src="httpInterceptor.js"></script>
+    <script src="framework/directives/dynamic.js"></script>
+    <script src="framework/directives/loader.js"></script>
+    <script src="framework/directives/text-reader.js"></script>
+    <script src="../scripts/angular-text-slider.min.js"></script>
+    <script src="preferenceControlKeys.js"></script>
+    <script src="lookups.js"></script>
+    <script src="shared/pages/annoucements/annoucementCtrl.js"></script>
+    <script src="templates/sliderCtrl.js"></script>
+    <script src="templates/chatPluginCtrl.js"></script>
+    <script src="templates/chatPluginURLCtrl.js"></script>
+    <script src="shared/pages/content/sliderSiteContentCtrl.js"></script>
+    <script src="shared/pages/content/landingServicesCtrl.js"></script>
+    <script src="framework/services/languageService.js"></script>
+    <script src="framework/directives/phone.js"></script>
+    <script src="../framework/services/urlHelperService.js"></script>
+    <script src="framework/directives/tahaluf-wizard.js"></script>
+    <script src="../scripts/tour/angular-smooth-scroll.js"></script>
+    <script src="../scripts/tour/ez-ng.js"></script>
+    <script src="../scripts/tour/hotkeys.js"></script>
+    <script src="../scripts/tour/angular-ui-tour.js"></script>
+    <script src="../scripts/angulartics.js"></script>
+    <script src="../scripts/angulartics-ga.js"></script>
+    <script src="../framework/services/googleAnalyticsService.js"></script>
+    <script type="text/ng-template" id="myTooltipTemplate.html">
+        <span>Special Tooltip with <strong>markup</strong> and {{ dynamicTooltipText }}</span>
+    </script>
+    <script src="framework/directives/email-auto-complete.js"></script>
+    <!-- production -->
+    <script type="text/javascript" src="https://survey.customerpulse.gov.ae/destination/index.js"></script>
+    <!-- sandbox Test-->
+    <!--<script type="text/javascript" src="https://sandboxsurvey.customerpulse.gov.ae/destination/index.js"></script>-->
+    <!-- Hamza :: code snippet that should stay before the head end tag </head> for google analytics -->
+    <!--<script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', window.config.googleAnalytics.eChannelsTrackingID, 'auto');
+    </script>-->
+
+    <script>
+        var googleTrackingId = window.config.googleAnalytics.eChannelsTrackingID;
+        document.write('<scr' + 'ipt async src="https://www.googletagmanager.com/gtag/js?id=' + googleTrackingId + '"></scr' + 'ipt>');
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', window.config.googleAnalytics.eChannelsTrackingID);
+    </script>
+
+    <!-- Hamza :: text reader related code
+    this code block should stay right before the closing head tag -->
+    <script type="text/javascript">
+        window.rsConf = { general: { usePost: true } };
+    </script>
+    <script src="//cdn1.readspeaker.com/script/9/ReadSpeaker.js?pids=embhl" type="text/javascript"></script>
+
+
+    <script src="../scripts/html2canvas.js"></script>
+    <script src="../scripts/pdfMake.js"></script>
+    <script src="content/js/html2pdf.bundle.js"></script>
+
+    <!-- end of text reader related code -->
+    <link href="content/ica/ica.css" rel="stylesheet" />
+    <link href="content/ica/ica-rtl.css" ng-if="loadArabicCss" rel="stylesheet" />
+    <link rel="stylesheet" id="icatheme" ng-href="content/less-theme/ICA/ica-{{color}}.css" />
+    <link href="content/tamm/aos.css" rel="stylesheet" />
+    <script src="content/tamm/aos.js"></script>
+    <script src="../scripts/particles.js"></script>
+    <script src="../scripts/stats.js"></script>
+    <script>
+        var count_particles, stats, update;
+        stats = new Stats;
+        stats.setMode(0);
+        stats.domElement.style.position = 'absolute';
+        stats.domElement.style.left = '0px';
+        stats.domElement.style.top = '0px';
+        // document.body.appendChild(stats.domElement);
+        count_particles = document.querySelector('.js-count-particles');
+        /*update = function () {
+            stats.begin();
+            stats.end();
+            if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+            }
+            requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);*/
+    </script>
+    <!--<script src="../scripts//monitoring/newrlelicMonitor.js" ng-if="enableNewRelic"></script>-->
+    <script src="https://cdn.userway.org/widget.js" data-account="JbouEH0RKl"></script>
+</head>
+    <body class="sidebar-active {{themeColorClass}}" ui-tour ui-tour-scroll-offset="270"
+        ui-tour-on-ready="onTourReady(tour)"
+        ui-tour-on-show="onTourStep(tour)"
+        ui-tour-on-end="onTourEnd()"
+        ui-tour-template-url="myTooltipTemplate.html">
+    <div class="box_services ratebox" ng-click="openrate()">
+        <i><img src="images/face-happy.png" alt="Happy face"/></i>
+        <span>{{ 'WebsiteRate' | translate }}</span>
+    </div>
+
+    <div controller="baseCtrl" class="">
+
+        <div ng-if="viewEnvironmentDetails" class="EnvironmentDetails">
+            <div class="alert alert-warning ">
+                <label>Environment: {{environmentName}}</label>
+                <span class="pull-right">
+                    <b>Version: {{version}}</b>
+                </span>
+            </div>
+        </div>
+        <div ng-include="'templates/ica/header.html'"></div>
+
+        <div ng-class="pathname.indexOf('#/login') > -1 ? '': 'container mt15'" id="maincontent">
+            <ui-view></ui-view>
+        </div>
+        <div class="pace  pace-inactive" loader ng-show="showLoader">
+            <div class="pace-progress" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+                <div class="pace-progress-inner"></div>
+            </div>
+            <div class="pace-activity"></div>
+        </div>
+
+
+        <div id="loaderDiv" loader style="display:none;">
+            <div class="sk-cube-grid ajax-loader">
+                <div class="sk-cube sk-cube1"></div>
+                <div class="sk-cube sk-cube2"></div>
+                <div class="sk-cube sk-cube3"></div>
+                <div class="sk-cube sk-cube3e"></div>
+                <div class="sk-cube sk-cube4"></div>
+                <div class="sk-cube sk-cube5"></div>
+                <div class="sk-cube sk-cube6"></div>
+                <div class="sk-cube sk-cube6e"></div>
+                <div class="sk-cube sk-cube7"></div>
+                <div class="sk-cube sk-cube8"></div>
+                <div class="sk-cube sk-cube9"></div>
+                <div class="sk-cube sk-cube9e"></div>
+            </div>
+
+        </div>
+        <div class="personalize_bar" ng-class="personalize_bar == true ? 'personalize_bar_open': 'personalize_bar_close'">
+
+            <div class="personalize_bar_menu">
+                <ul>
+                    <li><a href="javascript:void(0);" title="إغلاق" data="close" ng-click="personalize_bar = false"><i class="fa fa-close"></i></a></li>
+                    <li><a href="javascript:void(0);" title="الإعدادات" data="personalize_settings" ng-class="personalize_settings == true ? 'active-bar' : ''" ng-init="personalize_settings = true" ng-click="personalize_settings = true; personal_information = false; my_notofications = false"><i class="icon-settings"> </i></a></li>
+                </ul>
+            </div>
+            <div id="ctl00_ctrlHeader_upPersonalization">
+                <div class="personalize_data">
+
+                    <div class="personalize_settings" ng-show="personalize_settings">
+                        <div class="setting-options">
+                            <h3>{{'setting' | translate}}</h3>
+                            <ul class="fonts-settings">
+                                <li class="font-sizer decrease">
+                                    <a href="javascript:void(0);" ng-click="changeFontSize(-1);" title="{{'decreaceFont' |translate}}"><block class="span"> A-</block></a>
+                                </li>
+                                <li class="font-sizer increase">
+                                    <a href="javascript:void(0);" ng-click="changeFontSize(1);" title="{{'increaceFont' |translate}}"><block class="span"> A+</block></a>
+                                </li>
+                                <li class="change-skin" ng-init="changetoBlackTheme" ng-click="changeThemeBlack('black')" title="{{'blackWhite' |translate}}">
+                                    <i class="fa  fa-adjust"></i>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="setting-options">
+                            <h3>{{'selectTheme' | translate}}</h3>
+                            <ul class="theme-settings">
+                                <li ng-click="changeThemeColor('red')" class="border-red" ng-class="color == 'red' ? 'active-theme' : ''" title="{{'red' |translate}}">
+                                    <i class="fa fa-circle red"></i>
+                                </li>
+                                <li ng-click="changeThemeColor('blue')" class="border-blue" ng-class="color == 'blue' ? 'active-theme' : ''" title="{{'blue' |translate}}">
+                                    <i class="fa fa-circle blue"></i>
+                                </li>
+                                <li ng-click="changeThemeColor('green')" class="border-green" ng-class="color == 'green' ? 'active-theme' : ''" title="{{'green' |translate}}">
+                                    <i class="fa fa-circle teal"></i>
+                                </li>
+                                <li ng-click="changeThemeColor('')" class="border-gold" ng-class="color == '' ? 'active-theme' : ''" title="{{'gold' |translate}}">
+                                    <i class="fa fa-circle gold"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <toaster-container toaster-options="{'close-button':true}"></toaster-container>
+    </div>
+
+    <!--<div ng-if="enableChatbot">
+        <img style="" id="popupIcon" src="https://echannelsichat.tahaluf.ae/nmIQ/ICA_Chatbot/assets/images/animated.gif" width="100" height="100">
+
+        <div id="iframe" style="display: none;">
+            <span id="backtochat"
+                    style="display: none;">
+                <button style="top: 0;position: absolute; padding: 5px; width: 100px; background: #AC8A51; color: #fff; text-align: center;" type="button">
+                    Back to chatbot
+                </button>
+            </span>
+
+            <iframe id="iframe_tag" src="https://echannelsichat.tahaluf.ae/nmIQ/ICA_Chatbot/index.html?chatsource=icass"
+                    width="500" height="650" name="iframe_a"></iframe>
+        </div>
+
+        <span id="closeBtn" style="right: 45px; display: none;">
+            <img src="https://echannelsichat.tahaluf.ae/nmIQ/ICA_Chatbot/assets/images/close.ico" width="30" height="30">
+        </span>
+    </div>-->
+    <!--<div class="chat-plugin" ng-include="'templates/chatPlugin.html'"></div>-->
+
+    <div id="footer" ng-include="'templates/ica/footer.html'"></div>
+
+
+
+    <script type="text/javascript">
+        function ready() {
+            AOS.init();
+            setTimeout(function () {
+                AOS.init();
+            }, 1000);
+        }
+
+        document.addEventListener("DOMContentLoaded", ready);
+
+    </script>
+
+    <!--<script id="happiness-meter-widget-web-script"
+            async src="https://happinessmeter.gov.ae/webwidget/web.js"
+            data-container-id="happiness-meter-widget-container" data-language="{{loadArabiclang}}"
+            data-key="development" data-on-finish="console.log('Tahaluf')"
+            data-entity-sequence-id="377"
+            data-main-service-sequence-id="0"
+            data-subservice-sequence-id="0"
+            data-subservice-complementary-id="0"
+            data-customer-id="0"
+            data-email="happinessmeter@happinessmeter.gov.ae"
+            data-transaction-id="0"
+            data-emirates-id="0" data-version="latest" data-delay="0"
+            data-mode="click" data-mode-click-id="happiness-meter-widget-button"
+            data-css-url="https://happinessmeter.gov.ae/webwidget/web.css">
+    </script>-->
+    <!--<script>
+
+        window.onload = function () {
+            el = document.getElementById('popupIcon');
+            elClose = document.getElementById('closeBtn');
+            elClose.style.display = 'none';
+
+            el.onclick = popupClick;
+            elClose.onclick = popupClose;
+
+            function popupClick() {
+                el.style.display = 'none';
+                var frame = document.getElementById('iframe');
+                frame.style.height = '650px';
+                frame.style.display = 'block';
+                document.getElementById('closeBtn').style.right = '45px';
+                document.getElementById('closeBtn').style.display = 'block';
+            }
+
+            function popupClose() {
+                var frame = document.getElementById('iframe');
+                el = document.getElementById('popupIcon');
+                elClose = document.getElementById('closeBtn');
+                frame.style.display = 'none';
+                elClose.style.display = 'none';
+                el.style.display = 'block';
+
+                document.getElementById('closeBtn').style.right = '-200px';
+
+            }
+
+            var src = document.getElementById('iframe_tag').src;
+            var param = src + getParameterByName('chatsource');
+            //var urlParam = src+para;
+
+            document.getElementById('iframe_tag').setAttribute("src", param);
+            function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, '\\$&');
+                var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'), results = regex.exec(url);
+                if (!results) return null; if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, ' '));
+            }
+        }
+
+    </script>-->
+
+    </body>
+</html>

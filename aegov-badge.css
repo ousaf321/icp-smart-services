@@ -1,0 +1,279 @@
+.aegov-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    white-space: nowrap;
+    border-radius: .25rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 247 237 / var(--tw-bg-opacity, 1));
+    padding: .125rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    --tw-text-opacity: 1;
+    color: rgb(124 94 36 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge .badge-icon {
+    height: 1.25rem;
+    width: 1.25rem
+}
+
+.aegov-badge.badge-soft {
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 247 237 / var(--tw-bg-opacity, 1));
+    --tw-text-opacity: 1;
+    color: rgb(124 94 36 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-soft .badge-icon {
+    --tw-text-opacity: 1;
+    color: rgb(124 94 36 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-soft>.badge-dismiss>button:focus-visible {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(124 94 36 / var(--tw-ring-opacity, 1))
+}
+
+.aegov-badge.badge-solid {
+    --tw-bg-opacity: 1;
+    background-color: rgb(146 114 42 / var(--tw-bg-opacity, 1));
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-solid .badge-icon {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-solid>.badge-dismiss>button:focus-visible {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity, 1))
+}
+
+.aegov-badge.badge-error {
+    background-color: var(--clr-danger-50);
+    color: var(--clr-danger-700);
+}
+
+.aegov-badge.badge-error .badge-icon {
+    color: var(--clr-danger-700);
+}
+
+.aegov-badge.badge-error>.badge-dismiss>button:focus-visible {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(181 37 32 / var(--tw-ring-opacity, 1))
+}
+
+.aegov-badge.badge-error.badge-soft {
+    background-color: var(--clr-danger-50);
+    color: var(--clr-danger-700);
+}
+
+.aegov-badge.badge-error.badge-soft .badge-icon {
+    color: var(--clr-danger-700);
+}
+
+.aegov-badge.badge-error.badge-soft>.badge-dismiss>button:focus-visible {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(181 37 32 / var(--tw-ring-opacity, 1))
+}
+
+.aegov-badge.badge-error.badge-solid {
+    --tw-bg-opacity: 1;
+    background-color: rgb(216 55 49 / var(--tw-bg-opacity, 1));
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-error.badge-solid .badge-icon {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-error.badge-solid>.badge-dismiss>button:focus-visible {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity, 1))
+}
+
+.aegov-badge.badge-success {
+    --tw-bg-opacity: 1;
+    background-color: rgb(243 250 244 / var(--tw-bg-opacity, 1));
+    --tw-text-opacity: 1;
+    color: rgb(47 102 60 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-success .badge-icon {
+    --tw-text-opacity: 1;
+    color: rgb(47 102 60 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-success>.badge-dismiss>button:focus-visible {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(47 102 60 / var(--tw-ring-opacity, 1))
+}
+
+.aegov-badge.badge-success.badge-soft {
+    --tw-bg-opacity: 1;
+    background-color: rgb(243 250 244 / var(--tw-bg-opacity, 1));
+    --tw-text-opacity: 1;
+    color: rgb(47 102 60 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-success.badge-soft .badge-icon {
+    --tw-text-opacity: 1;
+    color: rgb(47 102 60 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-success.badge-soft>.badge-dismiss>button:focus-visible {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(47 102 60 / var(--tw-ring-opacity, 1))
+}
+
+.aegov-badge.badge-success.badge-solid {
+    --tw-bg-opacity: 1;
+    background-color: rgb(63 142 80 / var(--tw-bg-opacity, 1));
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-success.badge-solid .badge-icon {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-success.badge-solid>.badge-dismiss>button:focus-visible {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity, 1))
+}
+
+.aegov-badge.badge-info {
+    --tw-bg-opacity: 1;
+    background-color: rgb(231 245 255 / var(--tw-bg-opacity, 1));
+    --tw-text-opacity: 1;
+    color: rgb(0 60 255 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-info .badge-icon {
+    --tw-text-opacity: 1;
+    color: rgb(0 60 255 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-info>.badge-dismiss>button:focus-visible {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(0 60 255 / var(--tw-ring-opacity, 1))
+}
+
+.aegov-badge.badge-info.badge-soft {
+    --tw-bg-opacity: 1;
+    background-color: rgb(231 245 255 / var(--tw-bg-opacity, 1));
+    --tw-text-opacity: 1;
+    color: rgb(0 60 255 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-info.badge-soft .badge-icon {
+    --tw-text-opacity: 1;
+    color: rgb(0 60 255 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-info.badge-soft>.badge-dismiss>button:focus-visible {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(0 60 255 / var(--tw-ring-opacity, 1))
+}
+
+.aegov-badge.badge-info.badge-solid {
+    --tw-bg-opacity: 1;
+    background-color: rgb(4 61 255 / var(--tw-bg-opacity, 1));
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-info.badge-solid .badge-icon {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-info.badge-solid>.badge-dismiss>button:focus-visible {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity, 1))
+}
+
+.aegov-badge.badge-warning {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 251 235 / var(--tw-bg-opacity, 1));
+    --tw-text-opacity: 1;
+    color: rgb(178 85 11 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-warning .badge-icon {
+    --tw-text-opacity: 1;
+    color: rgb(178 85 11 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-warning>.badge-dismiss>button:focus-visible {
+    --tw-ring-color: var(--clr-warning-700);
+}
+
+.aegov-badge.badge-warning.badge-soft {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 251 235 / var(--tw-bg-opacity, 1));
+    --tw-text-opacity: 1;
+    color: rgb(178 85 11 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-warning.badge-soft .badge-icon {
+    --tw-text-opacity: 1;
+    color: rgb(178 85 11 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-warning.badge-soft>.badge-dismiss>button:focus-visible {
+    --tw-ring-color: var(--clr-warning-700);
+}
+
+.aegov-badge.badge-warning.badge-solid {
+    --tw-bg-opacity: 1;
+    background-color: rgb(214 121 9 / var(--tw-bg-opacity, 1));
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-warning.badge-solid .badge-icon {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+}
+
+.aegov-badge.badge-warning.badge-solid>.badge-dismiss>button:focus-visible {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity, 1))
+}
+
+.aegov-badge.badge-base {
+    border-radius: .25rem;
+    padding: .25rem .75rem;
+    font-size: .875rem;
+    line-height: 1.5rem
+}
+
+.aegov-badge.badge-base>span.badge-indicator {
+    height: .625rem;
+    width: .625rem
+}
+
+.aegov-badge.badge-lg {
+    border-radius: .25rem;
+    padding: .375rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem
+}
+
+.aegov-badge.badge-lg>span.badge-indicator {
+    height: .75rem;
+    width: .75rem
+}
+
+a.aegov-badge:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(230 215 162 / var(--tw-bg-opacity, 1))
+}

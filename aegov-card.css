@@ -1,0 +1,490 @@
+.aegov-card-group.card-stacked {
+    overflow: hidden
+}
+
+.aegov-card-shadowed {
+    position: relative;
+}
+
+.aegov-card-shadowed-content {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 1em;
+    padding: 2em;
+    z-index: 1;
+}
+
+.aegov-card-shadowed::before, .aegov-card-shadowed::after {
+    content: '';
+    width: 10%;
+    border-radius: 50%;
+    aspect-ratio: 1 / 2;
+    position: absolute;
+    filter: blur(44px);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.aegov-card-feedback {
+    background-color: #0000;
+    background-image: linear-gradient(94.01deg, #d1c78024 21.53%, #09455824 119.88%), url(//icp.gov.ae/wp-content/themes/icp_v4/./assets/img/feedback-bg.svg);
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: auto, auto;
+    background-attachment: scroll, scroll;
+    background-origin: padding-box, padding-box;
+    background-clip: border-box, border-box;
+}
+
+.aegov-card-shadowed::before {
+    background: linear-gradient(0deg, #D7BC6D 7%, rgba(9, 69, 88, 0.7) 20%);
+    top: 2em;
+    inset-inline-start: 1em;
+}
+
+.aegov-card-shadowed::after {
+    background: linear-gradient(0deg, #D7BC6D 70%, rgba(9, 69, 88, 0.7) 8%);
+    bottom: 2em;
+    inset-inline-end: 1em;
+}
+
+.aegov-card-gradient {
+    background: linear-gradient(60deg, #92742f, #cba344);
+    padding: 4rem;
+    color: #fff;
+    position: relative;
+    transition: 0.3s;
+}
+
+.aegov-card-gradient.gradient-darker {
+    background: linear-gradient(60deg, var(--clr-primary-800), var(--clr-primary-500));
+    padding: 4rem;
+    color: #fff;
+    position: relative;
+    transition: 0.3s;
+}
+
+.aegov-card-gradient.gradient-darker.service-card::before {
+    filter: brightness(0) invert(1);
+}
+
+.aegov-card-gradient:hover {
+    box-shadow: 2px 4px 8px var(--primary);
+}
+
+.aegov-card-gradient.gradient-secondary {
+    background: linear-gradient(60deg, #2d2d2d, #535153);
+}
+
+.aegov-card-gradient.gradient-secondary:hover {
+    box-shadow: 2px 4px 8px #535153;
+}
+
+.aegov-card-gradient .card-absolute-icon {
+    height: 100%;
+    position: absolute;
+    inset-inline-end: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aegov-card-gradient .card-absolute-icon-static {
+    position: absolute;
+    inset-inline-end: 1rem;
+    bottom: 0;
+    transform: translateY(30%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.25;
+}
+
+.aegov-card-gradient .card-absolute-icon-static svg{
+    width: 240px;
+    height: 240px;
+}
+
+.aegov-card-gradient .card-absolute-icon i:first-of-type {
+    font-size: 60px;
+    transform: translateY(2rem);
+    opacity: 0.25;
+    rotate: -30deg;
+    margin-inline-start: 5rem;
+}
+
+.aegov-card-gradient .card-absolute-icon i:last-of-type {
+    font-size: 160px;
+    opacity: 0.25;
+    rotate: -30deg;
+}
+
+.aegov-card-group.card-stacked>* {
+    height: 100%;
+    padding: 1.5rem;
+}
+
+.aegov-card-group.card-stacked>*> :not([hidden])~ :not([hidden]) {
+    margin-top: calc(1.5rem * calc(1 - 0));
+    margin-bottom: calc(1.5rem * 0)
+}
+
+.aegov-card {
+    border-radius: .75rem
+}
+
+.aegov-card>svg {
+    height: 2.5rem;
+    width: 2.5rem;
+    color: rgb(182 138 53)
+}
+
+.aegov-card .card-title {
+    font-family: Inter, Helvetica Neue, ui-sans-serif, system-ui, sans-serif;
+    font-size: 1.625rem;
+    line-height: 2.125rem;
+    font-weight: 800
+}
+
+.aegov-card .card-image {
+    aspect-ratio: 16/9;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.aegov-card:not(.card-bordered) .card-image {
+    border-radius: .75rem
+}
+
+    .aegov-card.card-bordered {
+        /*overflow: hidden;*/
+        border-style: solid;
+        border-width: 1px;
+        --tw-border-opacity: 1;
+        border-color: rgb(215 188 109 / var(--tw-border-opacity, 1))
+    }
+
+.aegov-card.card-bordered:not(.card-news)> :not([hidden])~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse))
+}
+
+.aegov-card.card-bordered:not(.card-news) {
+    padding: 1.5rem
+}
+
+.aegov-card.card-bordered:not(.card-news) .card-image {
+    display: block;
+    border-radius: .5rem
+}
+
+.aegov-card.card-glow {
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1)
+}
+
+.aegov-card.card-glow:hover {
+    --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);
+    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    --tw-shadow-color: rgb(182 138 53 / .3);
+    --tw-shadow: var(--tw-shadow-colored)
+}
+
+.aegov-card.card-news:not(.card-bordered)> :not([hidden])~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse))
+}
+
+.aegov-card.card-news:not(.card-bordered) img {
+    border-radius: .75rem
+}
+
+.aegov-card.card-news:not(.card-bordered) img:hover {
+    opacity: .9
+}
+
+.aegov-card.card-news .card-content> :not([hidden])~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse))
+}
+
+.aegov-card.card-news.card-bordered .card-content {
+    padding: 1.5rem
+}
+
+.aegov-card.card-service {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .15s
+}
+
+.aegov-card.card-service:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 247 237 / var(--tw-bg-opacity, 1))
+}
+
+.aegov-card.card-service .card-service-title,
+.aegov-card.card-service .card-title {
+    font-size: 1.625rem;
+    line-height: 2.125rem
+}
+
+.aegov-card.card-service .card-service-title>a,
+.aegov-card.card-service .card-title>a {
+    color: rgb(35 37 40)
+}
+
+.aegov-card.card-service .card-service-title>a:hover,
+.aegov-card.card-service .card-title>a:hover {
+    color: rgb(108 69 39)
+}
+
+.aegov-card.card-service .card-service-title {
+    font-weight: 800
+}
+
+.aegov-card.card-creative {
+    position: relative;
+    overflow: hidden;
+    border-radius: .75rem
+}
+
+.aegov-card.card-creative:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top, var(--tw-gradient-stops));
+    content: var(--tw-content);
+    --tw-gradient-from: #7C5E24 var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(124 94 36 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+
+.aegov-card.card-creative img {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.aegov-card.card-creative .card-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    padding: 1.75rem;
+    font-family: Inter, Helvetica Neue, ui-sans-serif, system-ui, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: rgb(249 247 237);
+    color: rgb(255 255 255);
+}
+
+.aegov-card.card-creative .card-content:where([dir=rtl], [dir=rtl] *) {
+    font-family: Noto Kufi Arabic, ui-sans-serif, Helvetica Neue, sans-serif
+}
+
+.aegov-card.card-sm {
+    border-radius: .5rem
+}
+
+.aegov-card.card-sm>svg {
+    height: 1.75rem;
+    width: 1.75rem
+}
+
+.aegov-card.card-sm .card-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem
+}
+
+.aegov-card.card-sm:not(.card-bordered) .card-image {
+    border-radius: .5rem
+}
+
+.aegov-card.card-sm.card-bordered:not(.card-news)> :not([hidden])~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.25rem * var(--tw-space-y-reverse))
+}
+
+.aegov-card.card-sm.card-bordered:not(.card-news) {
+    padding: 1rem
+}
+
+.aegov-card.card-sm.card-bordered:not(.card-news) .card-image {
+    border-radius: .25rem
+}
+
+.aegov-card.card-sm.card-news:not(.card-bordered)> :not([hidden])~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.25rem * var(--tw-space-y-reverse))
+}
+
+.aegov-card.card-sm.card-news:not(.card-bordered) img {
+    border-radius: .5rem
+}
+
+.aegov-card.card-sm.card-news .card-content> :not([hidden])~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.25rem * var(--tw-space-y-reverse))
+}
+
+.aegov-card.card-sm.card-news.card-bordered .card-content {
+    padding: 1rem
+}
+
+.aegov-card.card-sm.card-service .card-service-title,
+.aegov-card.card-sm.card-service .card-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem
+}
+
+.aegov-card.card-sm.card-creative .card-content {
+    padding: 1.25rem;
+    font-size: 2rem;
+    line-height: normal
+}
+
+.aegov-card.card-base {
+    border-radius: .75rem
+}
+
+.aegov-card.card-base>svg {
+    height: 2.5rem;
+    width: 2.5rem
+}
+
+.aegov-card.card-base .card-title {
+    font-size: 1.625rem;
+    line-height: 2.125rem;
+    font-weight: 800
+}
+
+.aegov-card.card-base:not(.card-bordered) .card-image {
+    border-radius: .75rem
+}
+
+.aegov-card.card-base.card-bordered:not(.card-news)> :not([hidden])~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse))
+}
+
+.aegov-card.card-base.card-bordered:not(.card-news) {
+    padding: 1.5rem
+}
+
+.aegov-card.card-base.card-bordered:not(.card-news) .card-image {
+    border-radius: .5rem
+}
+
+.aegov-card.card-base.card-news:not(.card-bordered)> :not([hidden])~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse))
+}
+
+.aegov-card.card-base.card-news:not(.card-bordered) img {
+    border-radius: .75rem
+}
+
+.aegov-card.card-base.card-news .card-content> :not([hidden])~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse))
+}
+
+.aegov-card.card-base.card-news.card-bordered .card-content {
+    padding: 1.5rem
+}
+
+.aegov-card.card-base.card-service .card-service-title,
+.aegov-card.card-base.card-service .card-title {
+    font-size: 1.625rem;
+    line-height: 2.125rem
+}
+
+.aegov-card.card-base.card-creative .card-content {
+    padding: 1.75rem;
+    font-size: 2.5rem;
+    line-height: 1.15
+}
+
+.aegov-card.card-lg {
+    border-radius: 1rem
+}
+
+.aegov-card.card-lg>svg {
+    height: 3.5rem;
+    width: 3.5rem
+}
+
+.aegov-card.card-lg .card-title {
+    font-size: 2rem;
+    line-height: 2.375rem
+}
+
+.aegov-card.card-lg:not(.card-bordered) .card-image {
+    border-radius: 1rem
+}
+
+.aegov-card.card-lg.card-bordered:not(.card-news)> :not([hidden])~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.75rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.75rem * var(--tw-space-y-reverse))
+}
+
+.aegov-card.card-lg.card-bordered:not(.card-news) {
+    padding: 1.75rem
+}
+
+.aegov-card.card-lg.card-bordered:not(.card-news) .card-image {
+    border-radius: .75rem
+}
+
+.aegov-card.card-lg.card-news:not(.card-bordered)> :not([hidden])~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.75rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.75rem * var(--tw-space-y-reverse))
+}
+
+.aegov-card.card-lg.card-news:not(.card-bordered) img {
+    border-radius: 1rem
+}
+
+.aegov-card.card-lg.card-news .card-content> :not([hidden])~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.75rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.75rem * var(--tw-space-y-reverse))
+}
+
+.aegov-card.card-lg.card-news.card-bordered .card-content {
+    padding: 1.75rem
+}
+
+.aegov-card.card-lg.card-service .card-service-title,
+.aegov-card.card-lg.card-service .card-title {
+    font-size: 2rem;
+    line-height: 2.375rem
+}
+
+.aegov-card.card-lg.card-creative .card-content {
+    padding: 2rem;
+    font-size: 3rem;
+    line-height: 1.05
+}

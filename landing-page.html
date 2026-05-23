@@ -1,0 +1,2088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Visa Services - ICP Smart Services Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Top Bar */
+        .header-top-bar {
+            background: linear-gradient(90deg, #c9a961 0%, #d4a574 100%);
+            height: 8px;
+            width: 100%;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #c9a961;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .org-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .org-name-ar {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .org-name-en {
+            font-size: 13px;
+            color: #666;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .header-center {
+            flex: 1;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .uae-emblem {
+            height: 50px;
+            width: auto;
+        }
+
+        .rating-stars {
+            display: flex;
+            gap: 3px;
+            font-size: 18px;
+            color: #c9a961;
+        }
+
+        /* Header Icons Styling */
+        .header-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .header-icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .header-icon-btn:hover {
+            color: #c9a961;
+        }
+
+        .menu-toggle-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            color: #666;
+            font-size: 24px;
+            display: none;
+        }
+
+        .menu-toggle-btn:hover {
+            color: #c9a961;
+        }
+
+        .header-icons svg {
+            width: 24px;
+            height: 24px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        /* Icon Navigation Bar */
+        .icon-nav {
+            background: #f5f5f5;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .icon-nav-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #c9a961;
+            font-size: 24px;
+            transition: all 0.3s;
+        }
+
+        .icon-nav-btn:hover {
+            background: #e8e8e8;
+            transform: scale(1.1);
+        }
+
+        .icon-nav svg {
+            width: 24px;
+            height: 24px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        /* App Download Section */
+        .app-download {
+            background: linear-gradient(135deg, #d4a574 0%, #c9a961 100%);
+            padding: 40px 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .app-download h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .store-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .store-btn {
+            background: #333;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s;
+        }
+
+        .store-btn:hover {
+            background: #555;
+            transform: translateY(-2px);
+        }
+
+        .store-btn img {
+            height: 30px;
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #e8f0e8 0%, #f0e8e8 100%);
+            padding: 60px 30px;
+            text-align: center;
+            position: relative;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            color: #c9a961;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-button {
+            background: white;
+            color: #333;
+            padding: 14px 50px;
+            border: 2px solid #ddd;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 40px;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .hero-button:hover {
+            background: #c9a961;
+            color: white;
+            border-color: #c9a961;
+        }
+
+        /* Device Mockup Section */
+        .device-mockup {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .device-mockup img {
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+        }
+
+        /* Accessibility Sidebar */
+        .accessibility-sidebar {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .accessibility-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #c9a961;
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .accessibility-btn:hover {
+            background: #d4a574;
+            transform: scale(1.1);
+        }
+
+        /* Navigation Menu */
+        .main-nav {
+            background: #f8f8f8;
+            border-bottom: 1px solid #eee;
+            display: none;
+        }
+
+        .main-nav.active {
+            display: block;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 16px 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-menu a:hover {
+            background: #fff;
+            border-bottom-color: #c9a961;
+            color: #c9a961;
+        }
+
+        .nav-menu .dropdown-menu {
+            list-style: none;
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid #eee;
+            border-top: none;
+            padding: 0;
+            margin: 0;
+            min-width: 200px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav-menu li:hover .dropdown-menu {
+            display: block;
+        }
+
+        .nav-menu .dropdown-menu a {
+            padding: 12px 20px;
+            border: none;
+        }
+
+        .nav-menu .dropdown-menu a:hover {
+            background: #f5f5f5;
+        }
+
+        /* Divider */
+        .divider {
+            height: 20px;
+            background: linear-gradient(135deg, #d4a574 0%, #c9a961 100%);
+            margin: 40px 0;
+        }
+
+        /* Why Use Section */
+        .why-section {
+            padding: 60px 30px;
+            background: white;
+        }
+
+        .why-section h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .features-list {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .feature-item {
+            padding: 15px;
+            background: #f9f9f9;
+            border-left: 4px solid #c9a961;
+            border-radius: 4px;
+        }
+
+        .feature-item h4 {
+            color: #c9a961;
+            margin-bottom: 8px;
+        }
+
+        .feature-item p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 60px 30px;
+            background: #f5f5f5;
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: #c9a961;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin: 0 auto 20px;
+            color: white;
+        }
+
+        .service-card h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .service-link {
+            color: #c9a961;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #c9a961;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-section ul li a:hover {
+            color: #c9a961;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #555;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .features-list,
+            .services-grid,
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                font-size: 32px;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 12px 15px;
+            }
+
+            .header-left {
+                flex: 1;
+                min-width: 0;
+            }
+
+            .icon-nav {
+                gap: 20px;
+                padding: 12px 20px;
+            }
+
+            .device-mockup {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .accessibility-sidebar {
+                position: static;
+                transform: none;
+                flex-direction: row;
+                left: auto;
+                top: auto;
+                justify-content: center;
+                margin: 20px 0;
+            }
+
+            .menu-toggle-btn {
+                display: flex !important;
+            }
+
+            .org-info {
+                display: none;
+            }
+
+            .header-center {
+                display: none;
+            }
+
+            .header-right {
+                gap: 10px;
+            }
+
+            .uae-emblem {
+                height: 40px;
+            }
+
+            .org-name-ar {
+                font-size: 12px;
+            }
+
+            .org-name-en {
+                font-size: 11px;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .nav-menu a {
+                padding: 12px 15px;
+            }
+
+            .main-nav {
+                border-bottom: none;
+            }
+
+            .nav-container {
+                padding: 0;
+            }
+
+            .app-download h3 {
+                font-size: 24px;
+            }
+
+            .store-buttons {
+                flex-direction: column;
+            }
+
+            .store-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Top Bar -->
+    <div class="header-top-bar"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="icalogo.png" alt="ICA Logo">
+            </div>
+            <div class="org-info">
+                <div class="org-name-ar">الهيئة الاتحادية للهوية والجنسية والجمارك وأمن الحدود</div>
+                <div class="org-name-en">FEDERAL AUTHORITY FOR IDENTITY, CITIZENSHIP, CUSTOMS & PORT SECURITY</div>
+            </div>
+        </div>
+
+        <div class="header-center">
+        </div>
+
+        <div class="header-right">
+            <img src="uaelogo.svg" alt="UAE National Emblem" class="uae-emblem">
+            <div class="rating-stars">
+                ★★★★★
+            </div>
+        </div>
+    </header>
+
+    <!-- Icon Navigation Bar -->
+    <div class="icon-nav">
+        <button class="icon-nav-btn" title="Profile">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                <circle cx="128" cy="96" r="64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle>
+                <path d="M32,216c19.37-33.47,54.55-56,96-56s76.63,22.53,96,56" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+            </svg>
+        </button>
+        
+        <button class="icon-nav-btn" id="langBtn" title="Language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle>
+                <path d="M168,128c0,64-40,96-40,96s-40-32-40-96,40-96,40-96S168,64,168,128Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+                <line x1="37.46" y1="96" x2="218.54" y2="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                <line x1="37.46" y1="160" x2="218.54" y2="160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+            </svg>
+        </button>
+        
+        <button class="icon-nav-btn" id="searchBtn" title="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                <circle cx="112" cy="112" r="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle>
+                <line x1="168.57" y1="168.57" x2="224" y2="224" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+            </svg>
+        </button>
+        
+        <button class="icon-nav-btn" id="quickLinksBtn" title="Quick Links">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                <rect x="48" y="48" width="160" height="160" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></rect>
+                <line x1="128" y1="48" x2="128" y2="208" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                <line x1="48" y1="128" x2="208" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+            </svg>
+        </button>
+        
+        <button class="menu-toggle-btn" id="menuToggle" title="Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24">
+                <rect width="256" height="256" fill="none"></rect>
+                <line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                <line x1="40" y1="64" x2="216" y2="64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                <line x1="40" y1="192" x2="216" y2="192" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+            </svg>
+        </button>
+    </div>
+
+    <!-- App Download Section -->
+    <div class="app-download">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h1 style="text-align: center; color: white; margin-bottom: 30px; font-size: 32px;">Download the Smart Services app</h1>
+            
+            <div class="store-buttons">
+                <div class="store-link">
+                    <a href="https://itunes.apple.com/us/app/ica-uae-echannels/id1374301965?mt=8" target="_blank">
+                        <img src="app-store-image.png" alt="App Store Image" style="max-width: 100%; height: auto;">
+                    </a>
+                </div>
+                <div class="store-link">
+                    <a href="https://play.google.com/store/apps/details?id=com.echannels.moismartservices" target="_blank">
+                        <img src="google-play-image.png" alt="Google Play Image" style="max-width: 100%; height: auto;">
+                    </a>
+                </div>
+                <div class="store-link">
+                    <a href="https://appgallery.huawei.com/#/app/C102535215" target="_blank">
+                        <img src="huawei-image.png" alt="Huawei Image" style="max-width: 100%; height: auto;">
+                    </a>
+                </div>
+            </div>
+
+            <div class="mobile-img-container">
+                <img class="mobile-img" src="devices-mockup.png" alt="Mobile App Image" style="max-width: 100%; height: auto;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1 class="hero-title">Golden Visa Services</h1>
+        <p class="hero-subtitle">Federal Authority for Identity, Citizenship, Customs and Ports Security</p>
+        <button class="hero-button">Click Here</button>
+        
+        <div class="device-mockup">
+            <img src="devices-mockup.png" alt="Device Mockup" style="max-width: 280px;">
+        </div>
+    </section>
+
+    <!-- Accessibility Sidebar -->
+    <div class="accessibility-sidebar">
+        <button class="accessibility-btn" title="Accessibility">♿</button>
+        <button class="accessibility-btn" title="Help">?</button>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#general-services">General Services</a></li>
+                <li><a href="#golden-visa">Golden Visa Services</a></li>
+                <li><a href="#blue-residency">Blue Residency Services</a></li>
+                <li><a href="#visa-services">Visa Services</a></li>
+                <li>
+                    <a href="#help" class="dropdown-toggle">Help</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Instructions</a></li>
+                        <li><a href="#">Smart Services</a></li>
+                    </ul>
+                </li>
+                <li><a href="#user-manual">User Manual</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="divider"></div>
+
+    <!-- Why Use Section -->
+    <section class="why-section">
+        <h2>Why use Smart Services?</h2>
+        <div class="features-list">
+            <div class="feature-item">
+                <h4>🎯 Unified Services</h4>
+                <p>Access all government services from a single platform without visiting multiple offices.</p>
+            </div>
+            <div class="feature-item">
+                <h4>⏱️ 24/7 Availability</h4>
+                <p>Services available round the clock for your convenience whenever you need them.</p>
+            </div>
+            <div class="feature-item">
+                <h4>📱 Mobile Ready</h4>
+                <p>Fully optimized mobile application for on-the-go access to all services anytime, anywhere.</p>
+            </div>
+            <div class="feature-item">
+                <h4>🔒 Secure & Safe</h4>
+                <p>Enterprise-grade security ensures all your personal and official data remains protected.</p>
+            </div>
+            <div class="feature-item">
+                <h4>⚡ Fast Processing</h4>
+                <p>Quick processing of requests with real-time tracking and status updates.</p>
+            </div>
+            <div class="feature-item">
+                <h4>📞 Expert Support</h4>
+                <p>Dedicated support team ready to assist you with any queries or issues.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <h2 style="text-align: center; margin-bottom: 40px; font-size: 28px; color: #333;">Featured Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">📄</div>
+                <h3>Public Services</h3>
+                <p>Access to comprehensive public services including permits, licenses, and government certifications.</p>
+                <a href="#" class="service-link">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">👑</div>
+                <h3>Golden Services</h3>
+                <p>Premium golden residency services with priority processing and dedicated support team.</p>
+                <a href="#" class="service-link">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏛️</div>
+                <h3>Public Visa Services</h3>
+                <p>Complete visa processing and immigration services for traveling and residency purposes.</p>
+                <a href="#" class="service-link">Learn More →</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Who We Are</a></li>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Consultative Services</a></li>
+                    <li><a href="#">Corporate Services</a></li>
+                    <li><a href="#">Typing Centers</a></li>
+                    <li><a href="#">Endorsements</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact & Support</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 20px; align-items: center;">
+                <img src="uaelogo.svg" alt="UAE Logo" style="height: 40px;">
+                <img src="logo-ministry.svg" alt="Ministry Logo" style="height: 40px;">
+            </div>
+            <p>&copy; 2024 Smart Services Portal. All rights reserved. | Powered by Government Authority</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+            });
+        }
+
+        // Language switcher
+        const langBtn = document.getElementById('langBtn');
+        if (langBtn) {
+            langBtn.addEventListener('click', function() {
+                alert('Language switcher - Choose between Arabic and English');
+            });
+        }
+
+        // Search functionality
+        const searchBtn = document.getElementById('searchBtn');
+        if (searchBtn) {
+            searchBtn.addEventListener('click', function() {
+                const query = prompt('Search for services:');
+                if (query) {
+                    alert('Searching for: ' + query);
+                }
+            });
+        }
+
+        // Quick links
+        const quickLinksBtn = document.getElementById('quickLinksBtn');
+        if (quickLinksBtn) {
+            quickLinksBtn.addEventListener('click', function() {
+                alert('Quick Links:\n- New ID Card\n- Renew ID\n- Replace ID\n- Status Check');
+            });
+        }
+
+        // Responsive menu toggle on smaller screens
+        window.addEventListener('resize', function() {
+            const menuBtn = document.querySelector('.menu-toggle-btn');
+            if (window.innerWidth <= 768) {
+                menuBtn.style.display = 'flex';
+                mainNav.style.display = 'none';
+            } else {
+                menuBtn.style.display = 'none';
+                mainNav.style.display = 'block';
+            }
+        });
+
+        // Trigger resize on load
+        window.dispatchEvent(new Event('resize'));
+    </script>
+</body>
+</html>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Top Bar */
+        .header-top-bar {
+            background: linear-gradient(90deg, #c9a961 0%, #d4a574 100%);
+            height: 8px;
+            width: 100%;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #c9a961;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .org-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .org-name-ar {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .org-name-en {
+            font-size: 13px;
+            color: #666;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .header-center {
+            flex: 1;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .uae-emblem {
+            height: 50px;
+            width: auto;
+        }
+
+        /* Header Icons Styling */
+        .header-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .header-icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .header-icon-btn:hover {
+            color: #c9a961;
+        }
+
+        .menu-toggle-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            color: #666;
+            font-size: 24px;
+            display: none;
+        }
+
+        .menu-toggle-btn:hover {
+            color: #c9a961;
+        }
+
+        .header-icons svg {
+            width: 24px;
+            height: 24px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        /* Navigation Menu */
+        .main-nav {
+            background: #f8f8f8;
+            border-bottom: 1px solid #eee;
+            display: none;
+        }
+
+        .main-nav.active {
+            display: block;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 16px 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-menu a:hover {
+            background: #fff;
+            border-bottom-color: #c9a961;
+            color: #c9a961;
+        }
+
+        .nav-menu .dropdown-menu {
+            list-style: none;
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid #eee;
+            border-top: none;
+            padding: 0;
+            margin: 0;
+            min-width: 200px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav-menu li:hover .dropdown-menu {
+            display: block;
+        }
+
+        .nav-menu .dropdown-menu a {
+            padding: 12px 20px;
+            border: none;
+        }
+
+        .nav-menu .dropdown-menu a:hover {
+            background: #f5f5f5;
+        }
+
+        /* App Download Section */
+        .app-download {
+            background: linear-gradient(135deg, #d4a574 0%, #c9a961 100%);
+            padding: 20px 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .app-download h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .store-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .store-btn {
+            background: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .store-btn:hover {
+            background: #555;
+        }
+
+        .store-btn img {
+            height: 25px;
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #f5f5f5;
+            padding: 60px 30px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            color: #c9a961;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .hero-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+            text-align: left;
+        }
+
+        .cta-btn {
+            background: #c9a961;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+
+        .cta-btn:hover {
+            background: #b39651;
+        }
+
+        /* Why Use Section */
+        .why-section {
+            padding: 60px 30px;
+            background: white;
+        }
+
+        .why-section h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .features-list {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .feature-item {
+            padding: 15px;
+            background: #f9f9f9;
+            border-left: 4px solid #c9a961;
+            border-radius: 4px;
+        }
+
+        .feature-item h4 {
+            color: #c9a961;
+            margin-bottom: 8px;
+        }
+
+        .feature-item p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Divider */
+        .divider {
+            height: 20px;
+            background: linear-gradient(135deg, #d4a574 0%, #c9a961 100%);
+            margin: 40px 0;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 60px 30px;
+            background: #f5f5f5;
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: #c9a961;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin: 0 auto 20px;
+            color: white;
+        }
+
+        .service-card h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .service-link {
+            color: #c9a961;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Consultative Services */
+        .consultative-section {
+            padding: 60px 30px;
+            background: white;
+        }
+
+        .consultative-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .consultative-card {
+            background: linear-gradient(135deg, #d4a574 0%, #c9a961 100%);
+            padding: 30px;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .consultative-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .consultative-card h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .consultative-card p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Login Section */
+        .login-section {
+            padding: 60px 30px;
+            background: #f5f5f5;
+            text-align: center;
+        }
+
+        .login-section h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .login-content {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .form-group label {
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .signin-btn {
+            background: #333;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .signin-btn:hover {
+            background: #555;
+        }
+
+        .forgot-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .forgot-link a {
+            color: #c9a961;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* Smart Services Section */
+        .smart-services {
+            padding: 60px 30px;
+            background: white;
+        }
+
+        .smart-services h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .smart-cards {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .smart-card {
+            background: #e8e8e8;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .smart-card-img {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #d4a574 0%, #c9a961 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+            overflow: hidden;
+        }
+
+        .smart-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .smart-card-content {
+            padding: 20px;
+        }
+
+        .smart-card-num {
+            font-size: 24px;
+            font-weight: bold;
+            color: #c9a961;
+            margin-bottom: 10px;
+        }
+
+        .smart-card-title {
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 60px 30px;
+            background: linear-gradient(135deg, #d4a574 0%, #c9a961 100%);
+            color: white;
+        }
+
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .stat-item p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #c9a961;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-section ul li a:hover {
+            color: #c9a961;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #555;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content,
+            .features-list,
+            .services-grid,
+            .consultative-grid,
+            .smart-cards,
+            .stats-grid,
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            header {
+                flex-direction: row;
+                gap: 10px;
+                padding: 12px 15px;
+            }
+
+            .header-left {
+                flex: 1;
+                min-width: 0;
+            }
+
+            .header-icons {
+                gap: 10px;
+            }
+
+            .menu-toggle-btn {
+                display: flex !important;
+            }
+
+            .org-info {
+                display: none;
+            }
+
+            .header-center {
+                display: none;
+            }
+
+            .header-right {
+                gap: 10px;
+            }
+
+            .uae-emblem {
+                height: 40px;
+            }
+
+            .org-name-ar {
+                font-size: 12px;
+            }
+
+            .org-name-en {
+                font-size: 11px;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .nav-menu a {
+                padding: 12px 15px;
+            }
+
+            .nav-menu .dropdown-menu {
+                position: static;
+                display: none;
+                box-shadow: none;
+                border: none;
+                background: #f5f5f5;
+            }
+
+            .nav-menu li:hover .dropdown-menu {
+                display: block;
+            }
+
+            .main-nav {
+                border-bottom: none;
+            }
+
+            .nav-container {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Top Bar -->
+    <div class="header-top-bar"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="icalogo.png" alt="ICA Logo">
+            </div>
+            <div class="org-info">
+                <div class="org-name-ar">الهيئة الاتحادية للهوية والجنسية والجمارك وأمن الحدود</div>
+                <div class="org-name-en">FEDERAL AUTHORITY FOR IDENTITY, CITIZENSHIP, CUSTOMS & PORT SECURITY</div>
+            </div>
+        </div>
+
+        <div class="header-center">
+            <!-- Center content if needed -->
+        </div>
+
+        <div class="header-right">
+            <img src="uaelogo.svg" alt="UAE National Emblem" class="uae-emblem">
+            <div class="header-icons">
+                <!-- User Profile Icon -->
+                <button class="header-icon-btn" title="Profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <circle cx="128" cy="96" r="64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle>
+                        <path d="M32,216c19.37-33.47,54.55-56,96-56s76.63,22.53,96,56" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+                    </svg>
+                </button>
+                
+                <!-- Language Icon -->
+                <button class="header-icon-btn" id="langBtn" title="Language">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle>
+                        <path d="M168,128c0,64-40,96-40,96s-40-32-40-96,40-96,40-96S168,64,168,128Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+                        <line x1="37.46" y1="96" x2="218.54" y2="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="37.46" y1="160" x2="218.54" y2="160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    </svg>
+                </button>
+                
+                <!-- Search Icon -->
+                <button class="header-icon-btn" id="searchBtn" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <circle cx="112" cy="112" r="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle>
+                        <line x1="168.57" y1="168.57" x2="224" y2="224" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    </svg>
+                </button>
+                
+                <!-- Quick Links Icon -->
+                <button class="header-icon-btn" id="quickLinksBtn" title="Quick Links">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <rect x="48" y="48" width="160" height="160" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></rect>
+                        <line x1="128" y1="48" x2="128" y2="208" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="48" y1="128" x2="208" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    </svg>
+                </button>
+                
+                <!-- Menu Toggle Button -->
+                <button class="menu-toggle-btn" id="menuToggle" title="Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="40" y1="64" x2="216" y2="64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="40" y1="192" x2="216" y2="192" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#general-services">General Services</a></li>
+                <li><a href="#golden-visa">Golden Visa Services</a></li>
+                <li><a href="#blue-residency">Blue Residency Services</a></li>
+                <li><a href="#visa-services">Visa Services</a></li>
+                <li>
+                    <a href="#help" class="dropdown-toggle">Help</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Instructions</a></li>
+                        <li><a href="#">Smart Services</a></li>
+                    </ul>
+                </li>
+                <li><a href="#user-manual">User Manual</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- App Download Section -->
+    <div class="app-download">
+        <h3>📱 Download Government Smart Services Mobile Application</h3>
+        <div class="store-buttons">
+            <button class="store-btn" style="background: white; color: #333; border: 1px solid #ddd;">
+                <img src="app-store-image.png" alt="App Store" style="height: 25px;">
+            </button>
+            <button class="store-btn" style="background: white; color: #333; border: 1px solid #ddd;">
+                <img src="google-play-image.png" alt="Google Play" style="height: 25px;">
+            </button>
+            <button class="store-btn" style="background: white; color: #333; border: 1px solid #ddd;">
+                <img src="huawei-image.png" alt="Huawei" style="height: 25px;">
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Golden Residency Services</h1>
+        <p>Unified Platform for Federal Authority Services</p>
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="devices-mockup.png" alt="Devices Mockup" style="max-width: 100%; height: auto;">
+            </div>
+            <div class="hero-text">
+                <p style="color: #333; margin-bottom: 20px;">Experience seamless access to all government services in one unified platform. Get instant access to federal authority services with user-friendly interfaces designed for your convenience.</p>
+                <button class="cta-btn">Click here</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Why Use Section -->
+    <section class="why-section">
+        <h2>Why use Smart Services?</h2>
+        <div class="features-list">
+            <div class="feature-item">
+                <h4>🎯 Unified Services</h4>
+                <p>Access all government services from a single platform without visiting multiple offices.</p>
+            </div>
+            <div class="feature-item">
+                <h4>⏱️ 24/7 Availability</h4>
+                <p>Services available round the clock for your convenience whenever you need them.</p>
+            </div>
+            <div class="feature-item">
+                <h4>📱 Mobile Ready</h4>
+                <p>Fully optimized mobile application for on-the-go access to all services anytime, anywhere.</p>
+            </div>
+            <div class="feature-item">
+                <h4>🔒 Secure & Safe</h4>
+                <p>Enterprise-grade security ensures all your personal and official data remains protected.</p>
+            </div>
+            <div class="feature-item">
+                <h4>⚡ Fast Processing</h4>
+                <p>Quick processing of requests with real-time tracking and status updates.</p>
+            </div>
+            <div class="feature-item">
+                <h4>📞 Expert Support</h4>
+                <p>Dedicated support team ready to assist you with any queries or issues.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Consultative Services Section -->
+    <section class="consultative-section">
+        <h2 style="text-align: center; margin-bottom: 40px; font-size: 28px; color: #333;">Our Services</h2>
+        <div class="consultative-grid">
+            <div class="consultative-card">
+                <h3>📋 Consultative Services</h3>
+                <p>Expert consultation services for all your government-related queries and documentation needs.</p>
+            </div>
+            <div class="consultative-card">
+                <h3>🏢 Corporate Services</h3>
+                <p>Comprehensive corporate solutions for business registration, licensing, and compliance.</p>
+            </div>
+            <div class="consultative-card">
+                <h3>✍️ Typing Centers Services</h3>
+                <p>Professional typing and documentation services for all official documents and forms.</p>
+            </div>
+            <div class="consultative-card">
+                <h3>🏛️ Endorsement Services</h3>
+                <p>Quick and reliable endorsement services for official documents and certifications.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <h2 style="text-align: center; margin-bottom: 40px; font-size: 28px; color: #333;">Featured Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">📄</div>
+                <h3>Public Services</h3>
+                <p>Access to comprehensive public services including permits, licenses, and government certifications.</p>
+                <a href="#" class="service-link">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">👑</div>
+                <h3>Golden Services</h3>
+                <p>Premium golden residency services with priority processing and dedicated support team.</p>
+                <a href="#" class="service-link">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏛️</div>
+                <h3>Public Visa Services</h3>
+                <p>Complete visa processing and immigration services for traveling and residency purposes.</p>
+                <a href="#" class="service-link">Learn More →</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Login Section -->
+    <section class="login-section">
+        <h2>Login</h2>
+        <div class="login-content">
+            <div class="login-form">
+                <button class="signin-btn" style="background: white; color: #333; border: 2px solid #333; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                    <img src="EN_SIGN_IN_WITH_UAEPASS.png" alt="Sign in with UAE Pass" style="height: 30px;">
+                </button>
+            </div>
+            <div class="forgot-link">
+                <a href="#">Use Other Login Options</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Smart Services Showcase -->
+    <section class="smart-services">
+        <h2>Smart Services</h2>
+        <div class="smart-cards">
+            <div class="smart-card">
+                <div class="smart-card-img">
+                    <img src="landing-img-2.png" alt="Service 1" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="smart-card-content">
+                    <div class="smart-card-num">01</div>
+                    <div class="smart-card-title">Document Processing</div>
+                </div>
+            </div>
+            <div class="smart-card">
+                <div class="smart-card-img">
+                    <img src="landing-img-3.png" alt="Service 2" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="smart-card-content">
+                    <div class="smart-card-num">02</div>
+                    <div class="smart-card-title">License & Permits</div>
+                </div>
+            </div>
+            <div class="smart-card">
+                <div class="smart-card-img">
+                    <img src="landing-img-4.png" alt="Service 3" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="smart-card-content">
+                    <div class="smart-card-num">03</div>
+                    <div class="smart-card-title">Government Services</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>50,000+</h3>
+                <p>Active Users</p>
+            </div>
+            <div class="stat-item">
+                <h3>15,000+</h3>
+                <p>Services Processed</p>
+            </div>
+            <div class="stat-item">
+                <h3>99.9%</h3>
+                <p>Uptime</p>
+            </div>
+            <div class="stat-item">
+                <h3>24/7</h3>
+                <p>Customer Support</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Who We Are</a></li>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Consultative Services</a></li>
+                    <li><a href="#">Corporate Services</a></li>
+                    <li><a href="#">Typing Centers</a></li>
+                    <li><a href="#">Endorsements</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact & Support</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 20px; align-items: center;">
+                <img src="uaelogo.svg" alt="UAE Logo" style="height: 40px;">
+                <img src="logo-ministry.svg" alt="Ministry Logo" style="height: 40px;">
+            </div>
+            <p>&copy; 2024 Smart Services Portal. All rights reserved. | Powered by Government Authority</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+            });
+        }
+
+        // Language switcher
+        const langBtn = document.getElementById('langBtn');
+        if (langBtn) {
+            langBtn.addEventListener('click', function() {
+                alert('Language switcher - Choose between Arabic and English');
+            });
+        }
+
+        // Search functionality
+        const searchBtn = document.getElementById('searchBtn');
+        if (searchBtn) {
+            searchBtn.addEventListener('click', function() {
+                const query = prompt('Search for services:');
+                if (query) {
+                    alert('Searching for: ' + query);
+                }
+            });
+        }
+
+        // Quick links
+        const quickLinksBtn = document.getElementById('quickLinksBtn');
+        if (quickLinksBtn) {
+            quickLinksBtn.addEventListener('click', function() {
+                alert('Quick Links:\n- New ID Card\n- Renew ID\n- Replace ID\n- Status Check');
+            });
+        }
+
+        // Responsive menu toggle on smaller screens
+        window.addEventListener('resize', function() {
+            const menuBtn = document.querySelector('.menu-toggle-btn');
+            if (window.innerWidth <= 768) {
+                menuBtn.style.display = 'flex';
+                mainNav.style.display = 'none';
+            } else {
+                menuBtn.style.display = 'none';
+                mainNav.style.display = 'block';
+            }
+        });
+
+        // Trigger resize on load
+        window.dispatchEvent(new Event('resize'));
+    </script>
+</body>
+</html>

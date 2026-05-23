@@ -1,0 +1,244 @@
+ul.steps-indicator > li.current > a {
+  color: rgba(152, 111, 47, 0.7);
+}
+ul.steps-indicator > li.current > a:before {
+  background-color: rgba(152, 111, 47, 0.7);
+}
+
+#header.bg-echannels .nav > li > a {
+  color: rgba(200, 151, 76, 0.7) !important;
+}
+#header.bg-echannels .mainnav > ul {
+  background-color: rgba(152, 111, 47, 0.7) !important;
+}
+#header.bg-echannels .mainnav > ul li a:hover {
+  background: rgba(74, 54, 23, 0.7) !important;
+}
+#header.bg-echannels .mainnav > ul li a.active {
+  background: rgba(74, 54, 23, 0.7) !important;
+}
+#header.bg-echannels .mainnav > ul li a:focus {
+  background: rgba(74, 54, 23, 0.7) !important;
+}
+.bg-black .nav > li:hover > a,
+.bg-black .nav > li:focus > a,
+.bg-black .nav > li.active > a {
+  background-color: rgba(152, 111, 47, 0.7) !important;
+}
+.boxes .btn:hover {
+  background: rgba(74, 54, 23, 0.7) !important;
+  border-color: rgba(74, 54, 23, 0.7) !important;
+}
+.help-section > li > span {
+  color: rgba(152, 111, 47, 0.7);
+}
+.help-section > li > span.selected {
+  color: rgba(152, 111, 47, 0.7);
+}
+.help-section > li > ul > li > span:hover {
+  color: rgba(152, 111, 47, 0.7);
+}
+.help-section > li > ul > li > span.selected {
+  color: rgba(152, 111, 47, 0.7);
+}
+.help-section > li > ul > li ul li span:hover {
+  color: rgba(152, 111, 47, 0.7);
+}
+.help-section > li > ul > li ul li span.selected {
+  color: rgba(152, 111, 47, 0.7);
+}
+.help-section.helpsection > div > ul > li:hover {
+  color: rgba(152, 111, 47, 0.7);
+}
+.panel-group .panel-default .panel-heading {
+  border-color: rgba(152, 111, 47, 0.7);
+  background: rgba(152, 111, 47, 0.7);
+}
+#status-buttons > a.currentStep span {
+  background-color: rgba(200, 151, 76, 0.7);
+}
+#status-buttons > a.currentStep:before {
+  background-color: rgba(200, 151, 76, 0.7);
+}
+#status-buttons > a.currentStep:after {
+  background-color: rgba(200, 151, 76, 0.7);
+}
+.rating-sec .face1 .fa,
+.rating-sec .face2 .fa,
+.rating-sec .face3 .fa {
+  color: rgba(152, 111, 47, 0.7);
+}
+.noticlicktrue {
+  color: rgba(152, 111, 47, 0.7);
+}
+.bottomHeader marquee span {
+  color: rgba(113, 83, 35, 0.7);
+}
+.bottomHeader .marqueetitle {
+  color: rgba(152, 111, 47, 0.7);
+}
+.landingServices h2.title {
+  color: rgba(113, 83, 35, 0.7);
+}
+.landingServices .servicedatails ul li i {
+  color: rgba(113, 83, 35, 0.7);
+}
+.btomsection .box_services {
+  background: rgba(152, 111, 47, 0.7);
+}
+.btomsection i {
+  border-bottom-color: rgba(74, 54, 23, 0.7);
+}
+.btomsection p {
+  border-top-color: rgba(35, 26, 11, 0.7);
+}
+.ftrcontent .box-btm .topsec {
+  border-bottom-color: rgba(152, 111, 47, 0.7);
+}
+.ftrcontent .box-btm .topsec i {
+  color: rgba(152, 111, 47, 0.7);
+}
+.footer .social-icons li a:hover {
+  color: rgba(152, 111, 47, 0.7);
+}
+.footer .footer-top a:hover {
+  color: rgba(152, 111, 47, 0.7);
+}
+.dashoboardpage h2 {
+  color: rgba(152, 111, 47, 0.7);
+}
+.dashoboardpage h2 .avalib-cach span {
+  color: rgba(152, 111, 47, 0.7);
+}
+.dashoboardpage h2 .logout {
+  background: rgba(152, 111, 47, 0.7);
+}
+.dashoboardpage .dashboardcontrols .dash-section .icondiv {
+  color: rgba(152, 111, 47, 0.7);
+}
+.dashoboardpage .dashboardcontrols .dash-section .icondiv.hasnoti {
+  background: rgba(152, 111, 47, 0.7);
+}
+.dashoboardpage .dashboardcontrols .dash-section p.count {
+  color: rgba(152, 111, 47, 0.7);
+}
+.dashoboardpage .dashboardcontrols .dash-section .dashboard-noti span.badge {
+  background: rgba(152, 111, 47, 0.7);
+}
+.dashoboardpage .dashboardcontrols .chartsection h4 {
+  color: rgba(152, 111, 47, 0.7);
+}
+.bg-gold {
+  background-color: rgba(152, 111, 47, 0.7) !important;
+  border-color: rgba(152, 111, 47, 0.7) !important;
+}
+.btn-danger {
+  background-color: rgba(152, 111, 47, 0.7);
+  border-color: rgba(152, 111, 47, 0.7);
+}
+a {
+  color: rgba(152, 111, 47, 0.7);
+}
+a:hover,
+a:focus {
+  color: rgba(113, 83, 35, 0.7);
+}
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active,
+.open .dropdown-toggle.btn-danger {
+  background-color: rgba(113, 83, 35, 0.7);
+  border-color: rgba(152, 111, 47, 0.7);
+}
+input[type=range]::-ms-thumb,
+input[type=range]::-ms-fill-lower,
+input[type=range]::-ms-fill-upper {
+  background: rgba(152, 111, 47, 0.7);
+}
+.text-size-slider {
+  color: rgba(152, 111, 47, 0.7);
+}
+.adel-progressbar .round-progress path {
+  stroke: rgba(152, 111, 47, 0.7) !important;
+}
+.box-selected .label-cont:hover {
+  background: rgba(152, 111, 47, 0.7);
+}
+/*new*/
+#header.bg-echannels .mainnav > ul {
+  background: none !important;
+}
+.bg-echannels .caret {
+  border-top-color: rgba(152, 111, 47, 0.7);
+  border-bottom-color: rgba(152, 111, 47, 0.7);
+}
+.navbar-nav > li > .dropdown-menu {
+  background: rgba(152, 111, 47, 0.7);
+}
+.landingServices .servicebox {
+  color: rgba(152, 111, 47, 0.7);
+  border-color: rgba(200, 151, 76, 0.7);
+}
+.landingServices .servicebox.active,
+.btomsection a .imgholder {
+  background: rgba(152, 111, 47, 0.7);
+}
+.footer a,
+.footer,
+.call-center-header,
+.visitor-count-header,
+.footer-section-title,
+.call-center-number,
+.visitor-count,
+.call-center,
+.visitor-counter {
+  color: rgba(152, 111, 47, 0.7);
+}
+.footer {
+  border-color: rgba(152, 111, 47, 0.7);
+}
+.footer-social-media a,
+.quick-access a,
+.floating_ring ul li {
+  background-color: rgba(152, 111, 47, 0.7);
+  color: #fff;
+}
+.btomsection {
+  background-image: none;
+  background-repeat: no-repeat;
+  filter: none;
+  background-color: #f6f5f5;
+}
+#header.bg-echannels .mainnav > ul li a:hover {
+  background: rgba(152, 111, 47, 0.7) !important;
+}
+.quicklinks .quicklinkscontent .app-content-body .dashboardcontrols div .dash-section,
+.downloadSpan {
+  background: rgba(152, 111, 47, 0.7);
+}
+.mobileapp_cont a,
+.loginService {
+  border-color: rgba(152, 111, 47, 0.7);
+}
+.quicklinks-item:hover {
+  background-color: rgba(152, 111, 47, 0.7);
+}
+.personalize_bar {
+  background-color: #986f2f;
+  color: #fff;
+}
+.personalize_settings ul.theme-settings li.active-theme {
+  border-color: #ffffff !important;
+}
+.personalize_settings .setting-options ul.fonts-settings li.change-skin i,
+#header.bg-echannels .personalize_bar_menu li a,
+#header.bg-echannels .personalize_bar_menu li a.active-bar,
+#header.bg-echannels .personalize_settings a {
+  color: #fff !important;
+}
+.mobileapp_cont {
+  background: rgba(152, 111, 47, 0.7);
+}
+
+/*# sourceMappingURL=ica-brown.css.map */
