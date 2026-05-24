@@ -5,134 +5,109 @@
     <title>ICP Smart Services - Golden Residence Nomination</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" media="all" type="text/css" href="bootstrap.min.css" />
-    <link href="font-awesome.css" rel="stylesheet" />
-    <link href="custom-style.css" rel="stylesheet" />
-    <link href="app.css" rel="stylesheet" />
-    <link href="ica.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" media="all" type="text/css" href="content/bootstrap/bootstrap.min.css" />
+    <link href="content/font-awesome/font-awesome.css" rel="stylesheet" />
+    <link href="content/custom-style.css" rel="stylesheet" />
+    <link href="content/app.css" rel="stylesheet" />
+    <link href="content/ica/ica.css" rel="stylesheet" />
+    
     <style>
+        .custom-wizard-row {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
         .wizard-step {
-            position: relative;
+            flex: 1;
+            text-align: center;
             background: #fff;
             border: 1px solid #e0e0e0;
             border-radius: 8px;
-            padding: 20px;
+            padding: 20px 10px;
             transition: all 0.3s ease;
+            min-width: 120px;
         }
         .wizard-step.active {
             border-color: #AC8A51;
             box-shadow: 0 4px 15px rgba(172, 138, 81, 0.15);
         }
         .step-number {
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
             background: #f4f4f4;
             color: #333;
             font-weight: bold;
             border-radius: 50%;
             margin: 0 auto 10px;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
+            font-size: 1.1rem;
         }
         .wizard-step.active .step-number {
             background: #AC8A51;
             color: #fff;
         }
-        .channel-badge {
-            background: rgba(172, 138, 81, 0.1);
-            color: #AC8A51;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            display: inline-block;
-            margin: 4px;
+        .step-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #444;
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .custom-wizard-row {
+                flex-wrap: wrap;
+            }
+            .wizard-step {
+                flex: unset;
+                width: 47%;
+            }
         }
     </style>
 </head>
 <body class="sidebar-active">
-    <div>
-        <div class="container mt-5" id="maincontent">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    
-                    <div class="card p-4 shadow-sm border-0 mb-4" style="border-top: 4px solid #AC8A51 !important; background: #fff;">
-                        <div class="d-flex justify-content-between align-items-center flex-wrap">
-                            <div>
-                                <span class="badge bg-dark mb-2">VISA - GOLDEN RESIDENCE</span>
-                                <h2 style="color: #AC8A51; font-weight: 700; letter-spacing: -0.5px;">NOMINATION REQUEST FOR GOLDEN RESIDENCE</h2>
-                                <p class="text-muted small mb-0"><i class="fa fa-clock-o"></i> Last Update Date : 2025-02-25</p>
-                            </div>
-                            <div class="mt-2 mt-md-0">
-                                <span class="channel-badge"><i class="fa fa-laptop"></i> Smart Services</span>
-                                <span class="channel-badge"><i class="fa fa-mobile"></i> Mobile App</span>
-                            </div>
-                        </div>
-                        <hr class="my-4">
-                        <p class="lead" style="font-size: 1.05rem; line-height: 1.7; color: #555;">
-                            This service allows the issuance of the golden residency, which includes the following categories: <strong>Outstanding Specialized Talents, Scientists and Specialists, Investors in Public Investments, Real Estate Investors, Entrepreneurs, High School Top-Ranked Students in UAE, Graduates of Accredited Universities in UAE, Graduates of Accredited Universities Outside UAE, and Frontline Workers</strong>.
-                        </p>
-                    </div>
-
-                    <div class="mb-4">
-                        <h4 class="mb-3" style="color: #333; font-weight: 600;">Application Procedures</h4>
-                        <div class="row g-3 text-center">
-                            <div class="col-md col-6">
-                                <div class="wizard-step active">
-                                    <div class="step-number">1</div>
-                                    <h5 class="h6 mb-0">Fill Information</h5>
-                                </div>
-                            </div>
-                            <div class="col-md col-6">
-                                <div class="wizard-step">
-                                    <div class="step-number">2</div>
-                                    <h5 class="h6 mb-0">Attachments</h5>
-                                </div>
-                            </div>
-                            <div class="col-md col-6">
-                                <div class="wizard-step">
-                                    <div class="step-number">3</div>
-                                    <h5 class="h6 mb-0">Fees Payment</h5>
-                                </div>
-                            </div>
-                            <div class="col-md col-6">
-                                <div class="wizard-step">
-                                    <div class="step-number">4</div>
-                                    <h5 class="h6 mb-0">Service Rate</h5>
-                                </div>
-                            </div>
-                            <div class="col-md col-12">
-                                <div class="wizard-step">
-                                    <div class="step-number">5</div>
-                                    <h5 class="h6 mb-0">Receive by Email</h5>
-                                </div>
-                            </div>
+    <div class="container mt-5" id="maincontent">
+        <div class="row justify-content-center">
+            <div class="col-xl-10">
+                
+                <div class="card p-4 shadow-sm mb-4" style="border-top: 4px solid #AC8A51; background: #fff;">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                        <div>
+                            <span class="badge bg-dark mb-2" style="background-color: #333;">VISA - GOLDEN RESIDENCE</span>
+                            <h2 style="color: #AC8A51; font-weight: 700; margin-top: 5px;">NOMINATION REQUEST FOR GOLDEN RESIDENCE</h2>
+                            <p class="text-muted small mb-0"><i class="fa fa-clock-o"></i> VISA - GOLDEN RESIDENCE - NEW REQUEST (Last Update: 2025-02-25)</p>
                         </div>
                     </div>
-
-                    <div class="card shadow-sm border-0 p-4 mb-5">
-                        <div class="row">
-                            <div class="col-md-4 border-end">
-                                <div class="list-group list-group-flush" id="service-tabs">
-                                    <a class="list-group-item list-group-item-action active" style="color: #AC8A51; background: none; border: none; font-weight: 600;"><i class="fa fa-info-circle me-2"></i> General Information</a>
-                                    <a class="list-group-item list-group-item-action text-muted" style="background: none; border: none;"><i class="fa fa-exclamation-triangle me-2"></i> Important Guidelines</a>
-                                    <a class="list-group-item list-group-item-action text-muted" style="background: none; border: none;"><i class="fa fa-file-text-o me-2"></i> Terms & Conditions</a>
-                                    <a class="list-group-item list-group-item-action text-muted" style="background: none; border: none;"><i class="fa fa-dollar me-2"></i> Service Fees Details</a>
-                                </div>
-                            </div>
-                            <div class="col-md-8 p-3">
-                                <h4 style="color: #AC8A51;" class="h5 mb-3">Service Guidelines</h4>
-                                <ul class="text-muted p-0 ps-3" style="line-height: 1.8;">
-                                    <li>Ensure all attachments are clear and uploaded in PDF or JPEG format.</li>
-                                    <li>Review fee requirements relative to your specific eligible talent category.</li>
-                                    <li>A notification will be sent immediately upon successful validation of entries.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
+                    <hr class="my-3">
+                    <p style="font-size: 1rem; line-height: 1.6; color: #555;">
+                        This service allows the issuance of the golden residency, which includes Outstanding Specialized Talents, Scientists, Public/Real Estate Investors, Entrepreneurs, High School Top-Ranked Students, and Frontline Workers.
+                    </p>
                 </div>
+
+                <div class="custom-wizard-row">
+                    <div class="wizard-step active">
+                        <div class="step-number">1</div>
+                        <p class="step-title">Fill Info</p>
+                    </div>
+                    <div class="wizard-step">
+                        <div class="step-number">2</div>
+                        <p class="step-title">Attachments</p>
+                    </div>
+                    <div class="wizard-step">
+                        <div class="step-number">3</div>
+                        <p class="step-title">Fees</p>
+                    </div>
+                    <div class="wizard-step">
+                        <div class="step-number">4</div>
+                        <p class="step-title">Service Rate</p>
+                    </div>
+                    <div class="wizard-step">
+                        <div class="step-number">5</div>
+                        <p class="step-title">Receive Email</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
