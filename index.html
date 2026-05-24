@@ -1,214 +1,140 @@
 <!DOCTYPE html>
-<html lang="{{siteLang}}" ng-app="mainApp" ng-controller="baseCtrl">
+<html lang="en" ng-app="mainApp" ng-controller="baseCtrl">
 <head>
     <base href="/icp-smart-services/">
-    <title ng-if="!loadArabicCss">ICP Smart Services</title>
-    <title ng-if="loadArabicCss">الهيئة الاتحادية للهوية والجنسية والجمارك وأمن المنافذ</title>
-    <meta ng-if="!loadArabicCss" name="description" content="You can now apply for all ICP services through ICP smart services portal">
-    <meta ng-if="loadArabicCss" name="description" content="يمكنك الان انجاز جميع معاملات الهيئة الإتحادية للهوية و الجنسية من خلال منظومة الخدمات الذكية">
+    <title>ICP Smart Services - Golden Residence Nomination</title>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=10" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="images/favica.png" />
-    <meta http-equiv="cache-control" content="max-age=0" />
-    <meta http-equiv="cache-control" content="no-cache" />
-    <meta http-equiv="expires" content="0" />
-    <meta http-equiv="pragma" content="no-cache" />
-    <link href="angular-selector.css" rel="stylesheet" />
     <link rel="stylesheet" media="all" type="text/css" href="bootstrap.min.css" />
-    <link rel="stylesheet" media="all" type="text/css" href="bootstrap-tour.min.css" />
-    <link rel="stylesheet" type="text/css" href="bootstrap-switch.css" />
-    <link rel="stylesheet" type="text/css" media="print" href="print.css" />
     <link href="font-awesome.css" rel="stylesheet" />
-    <link href="bootstrap-rtl.min.css" ng-if="loadArabicCss" rel="stylesheet" />
-    <link href="animate.css" rel="stylesheet" />
-    <link href="simple-line-icons.css" rel="stylesheet" />
     <link href="custom-style.css" rel="stylesheet" />
-    <link href="aegov-accordion.css" rel="stylesheet" />
-    <link href="aegov-alert.css" rel="stylesheet" />
-    <link href="aegov-avatar.css" rel="stylesheet" />
-    <link href="aegov-backgrounds.css" rel="stylesheet" />
-    <link href="aegov-badge.css" rel="stylesheet" />
-    <link href="aegov-borders.css" rel="stylesheet" />
-    <link href="aegov-btn.css" rel="stylesheet" />
-    <link href="aegov-card.css" rel="stylesheet" />
-    <link href="aegov-checkboxes.css" rel="stylesheet" />
-    <link href="aegov-file-input.css" rel="stylesheet" />
-    <link href="aegov-footer.css" rel="stylesheet" />
-    <link href="aegov-form-control.css" rel="stylesheet" />
-    <link href="aegov-header.css" rel="stylesheet" />
-    <link href="aegov-menu.css" rel="stylesheet" />
-    <link href="aegov-modal.css" rel="stylesheet" />
-    <link href="aegov-multiselect.css" rel="stylesheet" />
-    <link href="aegov-tab.css" rel="stylesheet" />
-    <link href="aegov-tables.css" rel="stylesheet" />
-    <link href="aegov-typography.css" rel="stylesheet" />
-    <link href="aegov-utilities.css" rel="stylesheet" />
-    <link href="aegov-variables.css" rel="stylesheet" />
-    <link href="eChannels.css" rel="stylesheet" />
     <link href="app.css" rel="stylesheet" />
-    <link rel="stylesheet" id="stylesheet-colors" ng-href="app-{{color}}.css" />
-    <link rel="stylesheet" id="stylesheet-colors2" ng-href="app-{{color2}}.css" />
-    <link href="tree-dropdown.css" rel="stylesheet" />
-    <link href="rate.css" rel="stylesheet" />
-    <link href="angular-wizard.min.css" rel="stylesheet" />
-    <link href="loading-bar.css" rel="stylesheet" />
-    <link href="toaster.css" rel="stylesheet" />
-    <link href="eChannels-rtl.css" ng-if="loadArabicCss" rel="stylesheet" />
-    <link href="Loading.css" rel="stylesheet" />
-    <link href="select.css" rel="stylesheet" />
-    <link href="scannerjs.css" rel="stylesheet" />
-    <script>
-        var wpwlOptions = { paymentTarget: "_top", forceCardHolderEqualsBillingName: true }
-    </script>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    <script src="tinymce.min.js"></script>
-    <script src="angular.min.js"></script>
-    <script src="angular-route.min.js"></script>
-    <script src="angular-animate.min.js"></script>
-    <script src="angular-localization.min.js"></script>
-    <script src="angular-sanitize.min.js"></script>
-    <script src="angular-translate.min.js"></script>
-    <script src="angular-translate-loader-partial.min.js"></script>
-    <script src="angular-translate-loader-static-files.min.js"></script>
-    <script src="angular-ui-router.min.js"></script>
-    <script src="angular-validation.min.js"></script>
-    <script src="angular-cookies.js"></script>
-    <script src="fp.min.js"></script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script src="angular-wizard.js"></script>
-    <script src="vs-google-autocomplete.js"></script>
-    <script src="angular-selector.js"></script>
-    <script src="ivh-treeview.js"></script>
-    <script src="loading-bar.js"></script>
-    <script src="toaster.js"></script>
-    <script src="mask.js"></script>
-    <script src="spin.js"></script>
-    <script src="ui-bootstrap-tpls-1.3.3.min.js"></script>
-    <script src="sotos.crop-image.js"></script>
-    <script src="jquery-3.4.1.min.js"></script>
-    <script src="jquery.signalR-2.4.3.min.js"></script>
-    <script src="jquery-signalr-hubs.js"></script>
-    <script src="iban.js"></script>
-    <script src="ocLazyLoad.js"></script>
-    <script src="ui-bootstrap.js"></script>
-    <script src="bootstrap.js"></script>
-    <script src="bootstrap-tour.js"></script>
-    <script src="ng-map.min.js"></script>
-    <script src="ngStorage.js"></script>
-    <script src="ngAutocomplete.js"></script>
-    <script src="ng-file-upload-shim.js"></script>
-    <script src="ng-file-upload.js"></script>
-    <script src="smart-table.js"></script>
-    <script src="tinymce.js"></script>
-    <script src="moment.js"></script>
-    <script src="moment-with-locales.js"></script>
-    <script src="select.js"></script>
-    <script src="angular-recaptcha.js"></script>
-    <script src="mime.js"></script>
-    <script src="app.js"></script>
-    <script src="google-app.js"></script>
-    <script src="app.routes.js"></script>
-    <script src="rememberMeService.js"></script>
-    <script src="tahaluf-tree-viewer.js"></script>
-    <script src="tahaluf-attachments-viewer.js"></script>
-    <script src="tahaluf-ocr.js"></script>
-    <script src="tahaluf-image-crop.js"></script>
-    <script src="csSelect.js"></script>
-    <script src="apiHelperService.js"></script>
-    <script src="notificationsService.js"></script>
-    <script src="lookupService.js"></script>
-    <script src="userService.js"></script>
-    <script src="draftHelperService.js"></script>
-    <script src="serviceTransactionService.js"></script>
-    <script src="authManagerService.js"></script>
-    <script src="userProfileService.js"></script>
-    <script src="userApplicantService.js"></script>
-    <script src="attachmentService.js"></script>
-    <script src="fileService.js"></script>
-    <script src="sakhr.js"></script>
-    <script src="numbersOnly.js"></script>
-    <script src="tahalufSelector.js"></script>
-    <script src="mobileAppDetector.js"></script>
-    <script src="amwalService.js"></script>
-    <script src="multiplePaymentService.js"></script>
-    <script src="eidatoolkit.js"></script>
-    <script src="scanner.js"></script>
-    <script src="dialog.js"></script>
-    <script src="dialogsCtrl.js"></script>
-    <script src="config.js"></script>
-    <script src="tree-dropdown.js"></script>
-    <script src="rate.js"></script>
-    <script src="tahaluf-dropdownlist.js"></script>
-    <script src="usernameAvailable.js"></script>
-    <script src="capitalizeFirst.js"></script>
-    <script src="ng-iban.js"></script>
-    <script src="dirPagination.js"></script>
-    <script src="scannerService.js"></script>
-    <script src="signalR-factory.js"></script>
-    <script src="signalrHubProxey.js"></script>
-    <script src="uaePassService.js"></script>
-    <script src="baseCtrl.js"></script>
-    <script src="headerCtrl.js"></script>
-    <script src="httpInterceptor.js"></script>
-    <script src="dynamic.js"></script>
-    <script src="loader.js"></script>
-    <script src="text-reader.js"></script>
-    <script src="angular-text-slider.min.js"></script>
-    <script src="preferenceControlKeys.js"></script>
-    <script src="lookups.js"></script>
-    <script src="annoucementCtrl.js"></script>
-    <script src="sliderCtrl.js"></script>
-    <script src="chatPluginCtrl.js"></script>
-    <script src="chatPluginURLCtrl.js"></script>
-    <script src="sliderSiteContentCtrl.js"></script>
-    <script src="landingServicesCtrl.js"></script>
-    <script src="languageService.js"></script>
-    <script src="phone.js"></script>
-    <script src="urlHelperService.js"></script>
-    <script src="tahaluf-wizard.js"></script>
-    <script src="angular-smooth-scroll.js"></script>
-    <script src="ez-ng.js"></script>
-    <script src="hotkeys.js"></script>
-    <script src="angular-ui-tour.js"></script>
-    <script src="angulartics.js"></script>
-    <script src="angulartics-ga.js"></script>
-    <script src="googleAnalyticsService.js"></script>
-    <script src="email-auto-complete.js"></script>
     <link href="ica.css" rel="stylesheet" />
-    <link href="ica-rtl.css" ng-if="loadArabicCss" rel="stylesheet" />
-    <link rel="stylesheet" id="icatheme" ng-href="ica-{{color}}.css" />
-    <link href="aos.css" rel="stylesheet" />
-    <script src="aos.js"></script>
-    <script src="particles.js"></script>
-    <script src="stats.js"></script>
-    <script src="https://cdn.userway.org/widget.js" data-account="JbouEH0RKl"></script>
+    <style>
+        .wizard-step {
+            position: relative;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        .wizard-step.active {
+            border-color: #AC8A51;
+            box-shadow: 0 4px 15px rgba(172, 138, 81, 0.15);
+        }
+        .step-number {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            background: #f4f4f4;
+            color: #333;
+            font-weight: bold;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        .wizard-step.active .step-number {
+            background: #AC8A51;
+            color: #fff;
+        }
+        .channel-badge {
+            background: rgba(172, 138, 81, 0.1);
+            color: #AC8A51;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: inline-block;
+            margin: 4px;
+        }
+    </style>
 </head>
-<body class="sidebar-active {{themeColorClass}}">
-    <div controller="baseCtrl">
-        <div ng-include="'header.html'"></div>
-        <div class="container mt15" id="maincontent">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card p-4 shadow-sm mb-4" style="border-top: 4px solid #AC8A51;">
-                        <h2 class="text-center mb-4" style="color: #AC8A51;">NOMINATION REQUEST FOR GOLDEN RESIDENCE</h2>
-                        <p class="text-muted text-center">VISA - GOLDEN RESIDENCE - NEW REQUEST (Last Update: 2025-02-25)</p>
-                        <hr>
-                        <p>This service allows the issuance of the golden residency, which includes Outstanding Specialized Talents, Scientists, Public/Real Estate Investors, Entrepreneurs, High School Top-Ranked Students, and Frontline Workers.</p>
-                        
-                        <h3 class="h5 mt-4 mb-3" style="color: #AC8A51;">Application Steps:</h3>
-                        <div class="row text-center">
-                            <div class="col"><div class="badge bg-secondary p-2 mb-1">1</div><p class="small">Fill Info</p></div>
-                            <div class="col"><div class="badge bg-secondary p-2 mb-1">2</div><p class="small">Attachments</p></div>
-                            <div class="col"><div class="badge bg-secondary p-2 mb-1">3</div><p class="small">Fees</p></div>
-                            <div class="col"><div class="badge bg-secondary p-2 mb-1">4</div><p class="small">Service Rate</p></div>
-                            <div class="col"><div class="badge bg-secondary p-2 mb-1">5</div><p class="small">Receive Email</p></div>
+<body class="sidebar-active">
+    <div>
+        <div class="container mt-5" id="maincontent">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    
+                    <div class="card p-4 shadow-sm border-0 mb-4" style="border-top: 4px solid #AC8A51 !important; background: #fff;">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap">
+                            <div>
+                                <span class="badge bg-dark mb-2">VISA - GOLDEN RESIDENCE</span>
+                                <h2 style="color: #AC8A51; font-weight: 700; letter-spacing: -0.5px;">NOMINATION REQUEST FOR GOLDEN RESIDENCE</h2>
+                                <p class="text-muted small mb-0"><i class="fa fa-clock-o"></i> Last Update Date : 2025-02-25</p>
+                            </div>
+                            <div class="mt-2 mt-md-0">
+                                <span class="channel-badge"><i class="fa fa-laptop"></i> Smart Services</span>
+                                <span class="channel-badge"><i class="fa fa-mobile"></i> Mobile App</span>
+                            </div>
+                        </div>
+                        <hr class="my-4">
+                        <p class="lead" style="font-size: 1.05rem; line-height: 1.7; color: #555;">
+                            This service allows the issuance of the golden residency, which includes the following categories: <strong>Outstanding Specialized Talents, Scientists and Specialists, Investors in Public Investments, Real Estate Investors, Entrepreneurs, High School Top-Ranked Students in UAE, Graduates of Accredited Universities in UAE, Graduates of Accredited Universities Outside UAE, and Frontline Workers</strong>.
+                        </p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h4 class="mb-3" style="color: #333; font-weight: 600;">Application Procedures</h4>
+                        <div class="row g-3 text-center">
+                            <div class="col-md col-6">
+                                <div class="wizard-step active">
+                                    <div class="step-number">1</div>
+                                    <h5 class="h6 mb-0">Fill Information</h5>
+                                </div>
+                            </div>
+                            <div class="col-md col-6">
+                                <div class="wizard-step">
+                                    <div class="step-number">2</div>
+                                    <h5 class="h6 mb-0">Attachments</h5>
+                                </div>
+                            </div>
+                            <div class="col-md col-6">
+                                <div class="wizard-step">
+                                    <div class="step-number">3</div>
+                                    <h5 class="h6 mb-0">Fees Payment</h5>
+                                </div>
+                            </div>
+                            <div class="col-md col-6">
+                                <div class="wizard-step">
+                                    <div class="step-number">4</div>
+                                    <h5 class="h6 mb-0">Service Rate</h5>
+                                </div>
+                            </div>
+                            <div class="col-md col-12">
+                                <div class="wizard-step">
+                                    <div class="step-number">5</div>
+                                    <h5 class="h6 mb-0">Receive by Email</h5>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="card shadow-sm border-0 p-4 mb-5">
+                        <div class="row">
+                            <div class="col-md-4 border-end">
+                                <div class="list-group list-group-flush" id="service-tabs">
+                                    <a class="list-group-item list-group-item-action active" style="color: #AC8A51; background: none; border: none; font-weight: 600;"><i class="fa fa-info-circle me-2"></i> General Information</a>
+                                    <a class="list-group-item list-group-item-action text-muted" style="background: none; border: none;"><i class="fa fa-exclamation-triangle me-2"></i> Important Guidelines</a>
+                                    <a class="list-group-item list-group-item-action text-muted" style="background: none; border: none;"><i class="fa fa-file-text-o me-2"></i> Terms & Conditions</a>
+                                    <a class="list-group-item list-group-item-action text-muted" style="background: none; border: none;"><i class="fa fa-dollar me-2"></i> Service Fees Details</a>
+                                </div>
+                            </div>
+                            <div class="col-md-8 p-3">
+                                <h4 style="color: #AC8A51;" class="h5 mb-3">Service Guidelines</h4>
+                                <ul class="text-muted p-0 ps-3" style="line-height: 1.8;">
+                                    <li>Ensure all attachments are clear and uploaded in PDF or JPEG format.</li>
+                                    <li>Review fee requirements relative to your specific eligible talent category.</li>
+                                    <li>A notification will be sent immediately upon successful validation of entries.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
-        <div id="footer" ng-include="'footer.html'"></div>
     </div>
 </body>
 </html>
