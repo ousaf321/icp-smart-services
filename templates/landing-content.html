@@ -1,0 +1,54 @@
+<div ng-class="pathname.indexOf('#/login') > -1 ? '': 'container mt15'" id="maincontent">
+    <ui-view class="ng-scope">
+        <div class="landing-section ng-scope" ng-if="!isFromWorkInUAE">
+            <div class="mobileapp-section mobileapp_cont d-md-none d-flex align-items-center py-3">
+                <div class="container">
+                    <h1 class="text-center ng-binding">Download Smart Services Mobile Application</h1>
+                    <div class="row d-flex flex-wrap">
+                        <div class="col-xs-4">
+                            <a href="https://itunes.apple.com/us/app/ica-uae-echannels/id1374301965?mt=8" target="_blank"><img src="images/ica/landingImages/app-store-image.png" alt="App Store Image"></a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="https://play.google.com/store/apps/details?id=com.echannels.moismartservices" target="_blank"><img src="images/ica/landingImages/google-play-image.png" alt="Google Play Image"></a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="https://appgallery.huawei.com/#/app/C102535215" target="_blank"><img src="images/ica/landingImages/huawei-image.png" alt="Huawei Image"></a>
+                        </div>
+                    </div>
+                    <img class="mobile-img" src="images/ica/landingImages/devices-mockup.png" alt="Mobile App Image">
+                </div>
+            </div>
+
+            <div class="position-relative" style="margin-top: calc(-1 * var(--header-bottom-m))">
+                <section ng-include="'shared/pages/content/sliderSiteContentIca.html'" class="ng-scope"></section>
+
+                <section ng-if="enableQuickSearch" class="quick-search-section container ng-scope">
+                    <div class="landing-search-container" style="overflow:visible">
+                        <div class="quick-search-top-section d-flex py-5 gap-3">
+                            <div class="quick-search-title d-flex justify-content-center align-items-center mx-5">
+                                <i class="ica-custom-fonts-search-file text-2x"></i>
+                                <p class="text-nowrap text-primary-color m-0 mx-2 ng-binding">Quick Search</p>
+                            </div>
+                            <div class="d-flex flex-column gap-4 w-100">
+                                <div class="quick-search-section-input-container w-100">
+                                    <div class="w-100 my-2">
+                                        <input name="requestNumber" placeholder="Request Number / PRAN / Id Number" aria-label="Enter Request Number, PRAN or ID Number" type="text" ng-model="searchCriteria.requestNumber" validation="required|min_digits:15" class="form-control landing-search-input" maxlength="25" numbers-only="numbers-only">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quick-search-title d-flex justify-content-center align-items-center mx-5 my-2">
+                                <button ng-disabled="!searchCriteria.requestNumber" type="button" value="Inquiry" ng-click="getCurrentRequest()" class="btn btn-sm btn-danger bg-gd-dk ng-binding">
+                                    Inquiry
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <section class="main-content">
+                <div ng-view=""></div>
+            </section>
+        </div>
+    </ui-view>
+</div>
