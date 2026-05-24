@@ -1,30 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="mainApp" ng-controller="baseCtrl">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
     <title>ICP Smart Services</title>
     <link rel="stylesheet" href="content/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="content/app.css">
     <link rel="stylesheet" href="content/ica/ica.css">
 </head>
 <body class="sidebar-active">
-    <div controller="baseCtrl">
-        <div id="maincontent" class="container mt-5">
-            <div class="card p-4 shadow-sm" style="border-top: 4px solid #AC8A51;">
-                <h2 style="color: #AC8A51;">NOMINATION REQUEST FOR GOLDEN RESIDENCE</h2>
-                <p>VISA - GOLDEN RESIDENCE - NEW REQUEST (Last Update: 2025-02-25)</p>
-                <hr>
-                <p>This service allows the issuance of the golden residency. Please complete the steps below.</p>
-                <div class="row text-center mt-4">
-                    <div class="col"><strong>1. Fill Info</strong></div>
-                    <div class="col"><strong>2. Attachments</strong></div>
-                    <div class="col"><strong>3. Fees</strong></div>
-                    <div class="col"><strong>4. Service Rate</strong></div>
-                    <div class="col"><strong>5. Receive Email</strong></div>
-                </div>
-            </div>
-        </div>
+    <div id="maincontent" class="container mt-5">
+        <div ng-include="'templates/wizard/wizard-steps.html'"></div>
+        <div ng-include="'templates/wizard/fill-info.html'"></div>
     </div>
+
+    <script src="scripts/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+    <script src="framework/baseCtrl.js"></script>
 </body>
 </html>
