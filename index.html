@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="mainApp" ng-controller="baseCtrl">
+<html lang="en" ng-app="mainApp" ng-controller="baseCtrl" style="height: 100%;">
 <head>
     <base href="/icp-smart-services/">
     <title>ICP Smart Services - Golden Residence Nomination</title>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favica.png">
     
-    <link rel="stylesheet" media="all" type="text/css" href="content/bootstrap/bootstrap.min.css" />
-    <link href="content/font-awesome/font-awesome.css" rel="stylesheet" />
-    <link href="content/custom-style.css" rel="stylesheet" />
-    <link href="content/app.css" rel="stylesheet" />
-    <link href="content/ica/ica.css" rel="stylesheet" />
-    
+    <link rel="stylesheet" media="all" type="text/css" href="content/bootstrap/bootstrap.min.css">
+    <link href="content/font-awesome/font-awesome.css" rel="stylesheet">
+    <link href="content/custom-style.css" rel="stylesheet">
+    <link href="content/eChannels.css" rel="stylesheet">
+    <link href="content/app.css" rel="stylesheet">
+    <link rel="stylesheet" id="icatheme" href="content/less-theme/ICA/ica-brown.css">
+    <link href="content/ica/ica.css" rel="stylesheet">
+
     <style>
         .custom-wizard-row {
             display: flex;
@@ -19,6 +23,7 @@
             justify-content: space-between;
             gap: 15px;
             margin-bottom: 30px;
+            margin-top: 20px;
         }
         .wizard-step {
             flex: 1;
@@ -67,47 +72,58 @@
     </style>
 </head>
 <body class="sidebar-active">
-    <div class="container mt-5" id="maincontent">
-        <div class="row justify-content-center">
-            <div class="col-xl-10">
-                
-                <div class="card p-4 shadow-sm mb-4" style="border-top: 4px solid #AC8A51; background: #fff;">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <div>
-                            <span class="badge bg-dark mb-2" style="background-color: #333;">VISA - GOLDEN RESIDENCE</span>
-                            <h2 style="color: #AC8A51; font-weight: 700; margin-top: 5px;">NOMINATION REQUEST FOR GOLDEN RESIDENCE</h2>
-                            <p class="text-muted small mb-0"><i class="fa fa-clock-o"></i> VISA - GOLDEN RESIDENCE - NEW REQUEST (Last Update: 2025-02-25)</p>
+    <div>
+        <div id="header" class="aegov-header">
+            <div class="container py-3">
+                <div class="branding-container d-flex justify-content-between align-items-center p-0">
+                    <a href="https://www.icp.gov.ae" class="navbar-brand p-0">
+                        <img src="images/ica/icalogo.png" alt="ICP Logo" height="72" style="height:72px;">
+                    </a>
+                    <div class="navbar-brand p-0">
+                        <img src="images/ica/uaelogo.svg" alt="UAE Logo" style="height:50px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-4" id="maincontent">
+            <div class="row justify-content-center">
+                <div class="col-xl-10">
+                    
+                    <div class="card p-4 shadow-sm mb-4" style="border-top: 4px solid #AC8A51; background: #fff; border-radius: 8px;">
+                        <span class="badge bg-dark mb-2 align-self-start" style="background-color: #333; color:#fff; padding: 5px 10px;">VISA - GOLDEN RESIDENCE</span>
+                        <h2 style="color: #AC8A51; font-weight: 700; margin-top: 10px; font-size: 1.75rem;">NOMINATION REQUEST FOR GOLDEN RESIDENCE</h2>
+                        <p class="text-muted small"><i class="fa fa-clock-o"></i> NEW REQUEST (Last Update: 2025-02-25)</p>
+                        <hr class="my-3">
+                        <p style="font-size: 1rem; line-height: 1.6; color: #555;">
+                            This service allows the issuance of the golden residency, which includes Outstanding Specialized Talents, Scientists and Specialists, Investors in Public Investments, Real Estate Investors, Entrepreneurs, High School Top-Ranked Students in UAE, Graduates of Accredited Universities in UAE, Graduates of Accredited Universities Outside UAE, and Frontline Workers.
+                        </p>
+                    </div>
+
+                    <div class="custom-wizard-row">
+                        <div class="wizard-step active">
+                            <div class="step-number">1</div>
+                            <p class="step-title">Fill Information</p>
+                        </div>
+                        <div class="wizard-step">
+                            <div class="step-number">2</div>
+                            <p class="step-title">Attachments</p>
+                        </div>
+                        <div class="wizard-step">
+                            <div class="step-number">3</div>
+                            <p class="step-title">Fees</p>
+                        </div>
+                        <div class="wizard-step">
+                            <div class="step-number">4</div>
+                            <p class="step-title">Service Rate</p>
+                        </div>
+                        <div class="wizard-step">
+                            <div class="step-number">5</div>
+                            <p class="step-title">Receive Service</p>
                         </div>
                     </div>
-                    <hr class="my-3">
-                    <p style="font-size: 1rem; line-height: 1.6; color: #555;">
-                        This service allows the issuance of the golden residency, which includes Outstanding Specialized Talents, Scientists, Public/Real Estate Investors, Entrepreneurs, High School Top-Ranked Students, and Frontline Workers.
-                    </p>
-                </div>
 
-                <div class="custom-wizard-row">
-                    <div class="wizard-step active">
-                        <div class="step-number">1</div>
-                        <p class="step-title">Fill Info</p>
-                    </div>
-                    <div class="wizard-step">
-                        <div class="step-number">2</div>
-                        <p class="step-title">Attachments</p>
-                    </div>
-                    <div class="wizard-step">
-                        <div class="step-number">3</div>
-                        <p class="step-title">Fees</p>
-                    </div>
-                    <div class="wizard-step">
-                        <div class="step-number">4</div>
-                        <p class="step-title">Service Rate</p>
-                    </div>
-                    <div class="wizard-step">
-                        <div class="step-number">5</div>
-                        <p class="step-title">Receive Email</p>
-                    </div>
                 </div>
-
             </div>
         </div>
     </div>
